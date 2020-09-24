@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def index
-    render json: {status: "It's working"}
+    #render json: {status: "It's working"}
+    redirect_to root_path, success: "You have successfully logged ind!"
   end
 
   def create
@@ -9,6 +10,7 @@ class SessionsController < ApplicationController
     #If the user is successfully authenticated
     if user
       session[:user_id] = user.id
+      session[:expires_at] = Time.current + 20.seconds
       render json: {status: :created, logged_in: true, user: user}
     else
       render json: {status: 401}
