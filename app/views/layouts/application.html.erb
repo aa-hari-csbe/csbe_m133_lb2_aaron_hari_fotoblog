@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Fotoblog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +11,7 @@
   </head>
 
   <body>
-  <%= render 'flash_messages' %>
+    <%= render 'layouts/flash_messages' %>
     <%= yield %>
   </body>
 </html>

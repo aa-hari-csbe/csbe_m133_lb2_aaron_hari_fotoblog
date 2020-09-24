@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def index
     #render json: {status: "It's working"}
-    redirect_to root_path, success: "You have successfully logged ind!"
+    #redirect_to sessions_index_path, success: "You have successfully logged ind!"
   end
 
   def create

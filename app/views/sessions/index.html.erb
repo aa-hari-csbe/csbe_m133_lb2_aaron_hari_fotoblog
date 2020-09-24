@@ -1,0 +1,17 @@
+<img src="" alt="">
+<section>
+  <article>
+    <h1>Fotoblog</h1>
+    <h2>Aaron Hari</h2>
+  </article>
+  <article>
+    <img src="" alt="">
+    <%= form_for :user do |u| %>
+      <p><%= u.text_field :email, placeholder: "Email" %></p>
+      <p><%= u.password_field :password, placeholder: "Password" %></p>
+      <%= u.submit "Login" %>
+    <% end %>
+    <%= link_to "Create a new account!", registrations_registration_path%>
+
+  </article>
+</section>
