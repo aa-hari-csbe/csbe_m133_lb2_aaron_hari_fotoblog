@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  def index
+    render json: {status: "It's working"}
+  end
+
   def create
     #Trys to authenticate the user with the email and password that comes along.
     user = User.find_by(email: params["user"]["email"]).try(:authenticate, params["user"]["password"])
