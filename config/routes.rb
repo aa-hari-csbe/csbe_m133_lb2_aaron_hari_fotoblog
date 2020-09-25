@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :sessions, only: [:create]
+  resources :sessions, only: [:create, :logout]
   resources :registrations, only: [:create]
   root 'sessions#index'
 
@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get '/sessions/index'
   get '/registrations/registration'
   get '/home/home'
-  get :logout, to: "sessions#logout"
+  get 'logout', to: "sessions#logout"
+  get '/home/profile'
 
   post '/sessions/index', to: 'sessions#create'
   post '/', to: 'sessions#create'

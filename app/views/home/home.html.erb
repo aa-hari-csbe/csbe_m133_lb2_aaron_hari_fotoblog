@@ -1,3 +1,32 @@
 <%= image_tag "index.png" %>
-<%= button_tag "Logout" %>
-<%= link_to image_tag("index.png"), logout_path %>
+<%= link_to button_tag("Logout"), logout_path %>
+<%= link_to image_tag("index.png"), home_profile_path%>
+<section>
+  <h1>My pinwall</h1>
+  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonoumy eirmod tmpor invidunt ut labore et dolore magna aliquyam erat, sed diam cpluputa. At vero eos et accusam et just.</p>
+</section>
+<section>
+  <% @pictures.each do |p| %>
+  <section>
+    <%=# image_tag p.image.url %>
+    <article>
+      <%= image_tag "index.png" %>
+      <%= @likes.where(picture_id: p.id).count %>
+    </article>
+    <article>
+      <% @comments.each do |c| %>
+      <article>
+        <% user = @users.find(c.user_id) %>
+        <%= image_tag  user.image.url%>
+        <p><%= c.comment %></p>
+      </article>
+     <% end %>
+      <artice>
+        #Kommentar schreiben!
+      </artice>
+    </article>
+
+    <%=  %>
+  </section>
+  <% end %>
+</section>
