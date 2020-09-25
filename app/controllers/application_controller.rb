@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   add_flash_types :danger, :primary, :success
 
-  @@session_duration = 2.minutes
+  @@session_duration = 60.minutes
 
   private
 

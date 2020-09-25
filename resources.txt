@@ -9,3 +9,6 @@ https://www.youtube.com/watch?v=jB6UXLsInUA
 
 #Images
 https://stackoverflow.com/questions/22247582/rails-4-saving-images-in-database
+
+#Default value
+https://stackoverflow.com/questions/11871827/adding-a-default-value-to-text-input-in-simple-form

@@ -7,4 +7,12 @@ class HomeController < ApplicationController
     @users = User.all
   end
 
+  def create_comment
+
+  end
+
+  def determine
+    render json: {status: "Its determining"}
+  end
+
 end
