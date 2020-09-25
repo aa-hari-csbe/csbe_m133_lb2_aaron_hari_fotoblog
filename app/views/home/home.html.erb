@@ -7,6 +7,7 @@
 </section>
 <section>
   <% @pictures.each do |p| %>
+
   <section>
 <!--   Insert the Picture.image.url-->
     <article>
@@ -25,16 +26,13 @@
      <% end %>
       <article>
 <!--        insert the image of the current_user-->
-        <%= form_for :comment do |nc| %>
-          <% nc.text_field :user_id, :input_html => { :value => @current_user.id} %>
-          <% nc.text_field :picture_id, :input_html => { :value => p.id} %>
-          <%= nc.text_field :comment %>
-          <% nc.submit %>
+          <%= form_for :comment do |new_comment| %>
+          <%= new_comment.hidden_field :picture_id, value: p.id %>
+          <%= new_comment.text_field :comment %>
+          <% new_comment.submit %>
         <% end %>
       </article>
     </article>
-
-    <%=  %>
   </section>
   <% end %>
 </section>

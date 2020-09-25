@@ -1,0 +1,23 @@
+<%= link_to image_tag("index.png"), home_home_path%>
+<section>
+    <%= form_for :user do |user| %>
+    <section>
+
+      <%= form_for :user do |f| %>
+        <%= f.file_field :image %>
+        <%= f.submit "Submit" %>
+      <% end %>
+
+
+    </section>
+    <section>
+    <%= user.text_field :username, value: @current_user.username%>
+      <article>
+        <%= user.text_field :firstname, value: @current_user.firstname%>
+        <%= user.text_field :lastname, value: @current_user.lastname %>
+      </article>
+    </section>
+    <%= user.hidden_field :id, value: @current_user.id %>
+    <%= user.submit "Save changes", data: { confirm: "Are you sure that you want to update your profile?" } %>
+    <% end %>
+</section>

@@ -12,10 +12,16 @@ Rails.application.routes.draw do
   get '/logout', to: "sessions#logout"
   get '/home/profile'
 
+
+
+  get '/home/home/:picture_id', to: 'home#set_picture_id'
+
   post '/sessions/index', to: 'sessions#create'
   post '/', to: 'sessions#create'
   #post '/home/home', to: 'sessions#logout'
-  post '/home/home', to: 'home#determine'
+  post '/home/home/', to: 'home#create_comment'
 
   post '/registrations/registration', to: 'registrations#create'
+
+  post '/home/profile', to: 'home#update'
 end
