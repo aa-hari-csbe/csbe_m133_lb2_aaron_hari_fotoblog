@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
 
   add_flash_types :danger, :primary, :success
 
+  @@session_duration = 30.seconds
+
   private
 
   def require_login

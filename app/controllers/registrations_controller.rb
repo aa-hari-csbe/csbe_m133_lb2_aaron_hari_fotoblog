@@ -4,12 +4,20 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-    user = User.new(email: params['user']['email'], password: params['user']['password'], password_confirmation: params['user']['password_confirmation'])
+    user = User.new(email: params['user']['email'],
+                    password: params['user']['password'],
+                    password_confirmation: params['user']['password_confirmation'],
+                    username: params['user']['username'],
+                    firstname: params['user']['firstname'],
+                    lastname: params['user']['lastname'])
     if user.save
       session[:user_id] = user.id
-      render json: {status: :created, user: user}
+      session[:expires_at] = Time.current + @@session_duration
+      redirect_to home_home_path, success: "You have successfully created a account!"
+      #render json: {status: :created, user: user}
     else
-      render json: {status: 500}
+      redirect_to registrations_registration_path, danger: "Either the email is already used or the passwords don't match."
+      #render json: {status: 500}
     end
   end
 end

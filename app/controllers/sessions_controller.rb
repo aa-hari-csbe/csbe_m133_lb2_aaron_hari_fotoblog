@@ -10,8 +10,9 @@ class SessionsController < ApplicationController
     #If the user is successfully authenticated
     if user
       session[:user_id] = user.id
-      session[:expires_at] = Time.current + 20.seconds
-      render json: {status: :created, logged_in: true, user: user}
+      session[:expires_at] = Time.current + @@session_duration
+      redirect_to home_home_path, success: "You have successfully logged in!"
+      #render json: {status: :created, logged_in: true, user: user}
     else
       render json: {status: 401}
     end
@@ -27,7 +28,8 @@ class SessionsController < ApplicationController
 
   def logout
     reset_session
-    render json: {status: 200, logged_out: true}
+    redirect_to sessions_index_path, success: "You have successfully logged out."
+    #render json: {status: 200, logged_out: true}
   end
 end
 

@@ -10,17 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_24_110822) do
+ActiveRecord::Schema.define(version: 2020_09_25_061928) do
 
   create_table "comments", force: :cascade do |t|
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.integer "picture_id"
   end
 
   create_table "likes", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.integer "picture_id"
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -47,4 +51,8 @@ ActiveRecord::Schema.define(version: 2020_09_24_110822) do
     t.datetime "image_updated_at"
   end
 
+  add_foreign_key "comments", "pictures"
+  add_foreign_key "comments", "users"
+  add_foreign_key "likes", "pictures"
+  add_foreign_key "likes", "users"
 end

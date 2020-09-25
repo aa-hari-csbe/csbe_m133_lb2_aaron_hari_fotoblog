@@ -1,0 +1,14 @@
+<%= link_to image_tag("index.png"), sessions_index_path %>
+<section>
+  <%= form_for :user do |u| %>
+    <p><%= u.email_field :email, placeholder: "Email" %></p>
+    <p><%= u.text_field :username, placeholder: "Username" %></p>
+    <section>
+      <p><%= u.text_field :firstname, placeholder: "Firstname" %></p>
+      <p><%= u.text_field :lastname, placeholder: "Lastname" %></p>
+    </section>
+    <p><%= u.password_field :password, placeholder: "Password" %></p>
+    <p><%= u.password_field :password_confirmation, placeholder: "Confirm password" %></p>
+    <%= u.submit "Create account"%>
+  <% end %>
+</section>

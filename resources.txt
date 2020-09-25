@@ -7,3 +7,5 @@ https://www.youtube.com/watch?v=1JRdaemJNh4&list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg
 #Flash errors
 https://www.youtube.com/watch?v=jB6UXLsInUA
 
+#Images
+https://stackoverflow.com/questions/22247582/rails-4-saving-images-in-database

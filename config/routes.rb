@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   get '/sessions/index'
   get '/registrations/registration'
   get '/home/home'
+  get :logout, to: "sessions#logout"
 
   post '/sessions/index', to: 'sessions#create'
   post '/', to: 'sessions#create'
+  post '/home/home', to: 'sessions#logout'
+
+  post '/registrations/registration', to: 'registrations#create'
 end
