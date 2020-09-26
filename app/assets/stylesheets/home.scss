@@ -1,3 +1,43 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.post {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 20rem;
+  margin-bottom: 3rem;
+}
+
+.likes{
+  margin: 2rem;
+}
+
+
+.comment-box {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  background-color: #E1E1E1;
+  width: 15rem;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.comment-single{
+  border-bottom: #FFFFFF 2px solid;
+  p {
+
+    margin: 0.5rem;
+  }
+}
+
+.comment-new{
+  position: sticky;
+  top: 100%;
+  width: 100%;
+}
+
+.comment-new-input {
+  width: 100%;
+}
+

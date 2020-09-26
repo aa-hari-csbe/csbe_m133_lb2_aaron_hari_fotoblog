@@ -23,9 +23,9 @@ class HomeController < ApplicationController
 
   def update
     if params[:commit] == "Submit"
-        @user = User.new(image_params)
-        @user.save
-        redirect_to home_profile_path, success: "You have successfully uploaded your image!"
+      @user = User.new(image_params)
+      @user.save
+      redirect_to home_profile_path, success: "You have successfully uploaded your image!"
     else
       @user = User.find(params['user']['id'])
       @user.update_attributes(username: params['user']['username'], firstname: params['user']['firstname'], lastname: params['user']['lastname'])
