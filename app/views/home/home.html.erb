@@ -15,6 +15,11 @@
         <%= image_tag(p.image.url) %>
       </article>
       <article class="likes">
+        <%= form_for :like do |l| %>
+          <%= l.hidden_field :picture_id, value: p.id %>
+          <%= l.hidden_field :user_id, value: @current_user.id %>
+          <%= l.submit "Like" %>
+        <% end %>
         <%= @likes.where(picture_id: p.id).count %>
       </article>
       <article class="comment-box">
