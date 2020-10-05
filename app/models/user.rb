@@ -9,4 +9,8 @@ class User < ApplicationRecord
   validates_presence_of :username
   validates_presence_of :firstname
   validates_presence_of :lastname
+
+  has_attached_file :image
+  validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+
 end

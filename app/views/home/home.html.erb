@@ -12,7 +12,7 @@
     <section class="post">
       <!--   Insert the Picture.image.url-->
       <article>
-        <%= image_tag "index.png" %>
+        <%= image_tag(p.image.url) %>
       </article>
       <article class="likes">
         <%= @likes.where(picture_id: p.id).count %>
@@ -34,7 +34,7 @@
           <%= form_for :comment do |new_comment| %>
             <%= new_comment.hidden_field :picture_id, value: p.id %>
             <%= new_comment.text_field :comment, class: "comment-new-input", placeholder: "Comment..." %>
-            <% new_comment.submit create_comment_path %>
+            <% new_comment.submit 'create_comment' %>
           <% end %>
         </article>
       </article>
@@ -45,7 +45,7 @@
 <section>
   <%= form_for :picture do |p| %>
    <%= p.file_field :image %>
-    <%= p.submit create_picture_path, create_picture_path %>
+    <%= p.submit 'Upload Picture' %>
   <% end %>
 </section>
 <% end %>

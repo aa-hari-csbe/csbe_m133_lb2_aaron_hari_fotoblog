@@ -9,7 +9,8 @@ class RegistrationsController < ApplicationController
                     password_confirmation: params['user']['password_confirmation'],
                     username: params['user']['username'],
                     firstname: params['user']['firstname'],
-                    lastname: params['user']['lastname'])
+                    lastname: params['user']['lastname'],
+                    image: params['user']['image'])
     if user.save
       session[:user_id] = user.id
       session[:expires_at] = Time.current + @@session_duration

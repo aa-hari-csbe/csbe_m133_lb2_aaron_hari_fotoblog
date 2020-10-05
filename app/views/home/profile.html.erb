@@ -3,11 +3,11 @@
     <%= form_for :user do |user| %>
     <section>
 
-      <%= form_for :user do |f| %>
-        <%= f.file_field :image %>
-        <%= f.submit "Submit" %>
+      <%= form_for :picture do |i| %>
+        <%= i.file_field :image %>
+        <%= i.submit "Submit" %>
       <% end %>
-
+      <%= image_tag(@current_user.image.url) %>
 
     </section>
     <section>
