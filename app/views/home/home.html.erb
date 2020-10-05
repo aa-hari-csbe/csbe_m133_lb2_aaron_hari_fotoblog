@@ -44,6 +44,7 @@
 <section>
   <%= form_for :picture do |p| %>
     <%= p.file_field :image %>
+    <%= p.text_field :title %>
     <%= p.submit 'Upload picture' %>
   <% end %>
 </section>
