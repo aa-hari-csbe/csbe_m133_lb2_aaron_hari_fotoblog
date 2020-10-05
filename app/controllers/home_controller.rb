@@ -60,9 +60,11 @@ class HomeController < ApplicationController
 
   def default_image
     @user = User.find(@current_user.id)
-    if @user.update_attributes("7070_097.jpg")
+    file = File.open("/home/aaron/Pictures/Screenshot from 2020-10-05 10-14-01.png")
+    if @user.update_attribute(:image, file)
       redirect_to home_profile_path, success: "You have successfully set your profile picture to the default!"
     end
+    file.close
   end
 
   def new
