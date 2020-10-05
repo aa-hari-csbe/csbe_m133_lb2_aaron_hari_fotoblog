@@ -10,8 +10,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= render 'layouts/flash_messages' %>
+  <body class="flex-container">
+    <%= render 'layouts/flash_messages', class: "flash-messages"%>
     <%= yield %>
   </body>
 </html>

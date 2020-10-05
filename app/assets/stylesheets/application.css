@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+.flash-messages {
+    width: 40%;
+    margin-top: 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+
+}
+
+body{
+    flex-direction: column;
+}
