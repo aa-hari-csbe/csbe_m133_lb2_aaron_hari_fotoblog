@@ -34,10 +34,18 @@
           <%= form_for :comment do |new_comment| %>
             <%= new_comment.hidden_field :picture_id, value: p.id %>
             <%= new_comment.text_field :comment, class: "comment-new-input", placeholder: "Comment..." %>
-            <% new_comment.submit %>
+            <% new_comment.submit create_comment_path %>
           <% end %>
         </article>
       </article>
     </section>
   <% end %>
 </section>
+<% if @current_user.email == "aaron@familiehari.ch" %>
+<section>
+  <%= form_for :picture do |p| %>
+   <%= p.file_field :image %>
+    <%= p.submit create_picture_path, create_picture_path %>
+  <% end %>
+</section>
+<% end %>

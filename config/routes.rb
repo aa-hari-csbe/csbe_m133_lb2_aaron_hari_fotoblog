@@ -18,10 +18,13 @@ Rails.application.routes.draw do
 
   post '/sessions/index', to: 'sessions#create'
   post '/', to: 'sessions#create'
-  #post '/home/home', to: 'sessions#logout'
-  post '/home/home/', to: 'home#create_comment'
+
+  post '/home/home/', to: 'home#create_comment', as: 'create_comment'
+  post '/home/home/picture', to: 'home#create_comment', as: 'create_picture'
 
   post '/registrations/registration', to: 'registrations#create'
 
   post '/home/profile', to: 'home#update'
+
+
 end

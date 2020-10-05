@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     @comments = Comment.all
     @likes = Like.all
     @users = User.all
+    @picture = Picture.new
   end
 
 
@@ -35,6 +36,24 @@ class HomeController < ApplicationController
 
   def image_params
     params.require(:user).permit(:image)
+  end
+
+
+  //////////////////
+
+
+  def new
+    @picture = Picture.new
+  end
+
+  def create
+    @picture = Picture.new(picture_params)
+  end
+
+  private
+
+  def picture_params
+    params.require(:picture).permit(:image)
   end
 
 end
