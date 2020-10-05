@@ -23,7 +23,10 @@ Rails.application.routes.draw do
 
   post '/registrations/registration', to: 'registrations#create'
 
-  post '/home/profile', to: 'home#update'
+  patch '/home/profile', to: 'home#update', as: 'update_user'
+  delete '/home/profile', to: 'home#destroy', as: 'delete_user'
+  put '/home/profile', to: 'home#default_image', as: 'default_image'
+
 
 
 end

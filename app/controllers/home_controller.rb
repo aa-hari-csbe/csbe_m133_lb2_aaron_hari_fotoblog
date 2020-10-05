@@ -13,6 +13,7 @@ class HomeController < ApplicationController
 
   def profile
     @users = User.all
+    @user = @current_user
   end
 
 
@@ -20,8 +21,7 @@ class HomeController < ApplicationController
   def update
     if params[:commit] == "Submit"
       @user = User.find(@current_user.id)
-      @user.update_attribute(:image, image_params)
-      if @user.save
+      if @user.update_attributes(image_params)
         redirect_to home_profile_path, success: "You have successfully uploaded your image!"
       else
         redirect_to home_profile_path, danger: "Try it again, the picture couldn't be updated."
@@ -34,28 +34,36 @@ class HomeController < ApplicationController
   end
 
 
-
-
-
   def create
-    if params[:commit] == "create_comment"
-      comment = Comment.new(comment: params['comment']['comment'], user_id: @current_user.id, picture_id: params['comment']['picture_id'])
-      if comment.save
-        redirect_to home_home_path, success: "You have successfully posted your comment."
-      else
-        redirect_to home_home_path, danger: "Try it again, the comment couldn't be posted."
-      end
-    else
+    if params[:commit] == "Upload picture"
       @picture = Picture.new(picture_params)
       if @picture.save
         redirect_to home_home_path, success: "You have successfully uploaded your picture."
       else
         redirect_to home_home_path, danger: "Try it again, the picture couldn't be uploaded."
       end
+    else params[:commit] == "create comment"
+      comment = Comment.new(comment: params['comment']['comment'], user_id: @current_user.id, picture_id: params['comment']['picture_id'])
+      if comment.save
+        redirect_to home_home_path, success: "You have successfully posted your comment."
+      else
+        redirect_to home_home_path, danger: "Try it again, the comment couldn't be posted."
+      end
     end
   end
 
-  #////////////////////
+  def destroy
+    reset_session
+    User.find(@current_user.id).destroy
+    redirect_to sessions_index_path, primary: "Your account is deleted."
+  end
+
+  def default_image
+    @user = User.find(@current_user.id)
+    if @user.update_attributes("7070_097.jpg")
+      redirect_to home_profile_path, success: "You have successfully set your profile picture to the default!"
+    end
+  end
 
   def new
     @picture = Picture.new
