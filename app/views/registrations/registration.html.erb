@@ -1,16 +1,19 @@
-<%= link_to image_tag("index.png"), sessions_index_path %>
-<section>
-  <%= form_for :user do |u| %>
-    <p><%= u.email_field :email, placeholder: "Email" %></p>
-    <p><%= u.text_field :username, placeholder: "Username" %></p>
-    <p><%= u.file_field :image %></p>
-    <section>
-      <p><%= u.text_field :firstname, placeholder: "Firstname" %></p>
-      <p><%= u.text_field :lastname, placeholder: "Lastname" %></p>
-    </section>
-    <p><%= u.password_field :password, placeholder: "Password" %></p>
-    <p><%= u.password_field :password_confirmation, placeholder: "Confirm password" %></p>
+<a href="/../home/home" class="icon-link">
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-square-fill icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm9.5 8.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
+  </svg>
+</a>
+<%= form_for :user, :html => {:class => 'flex-container form-for-user'} do |u| %>
+  <%= u.email_field :email, placeholder: "Email", class: "form-for-item form-control" %>
+  <%= u.text_field :username, placeholder: "Username", class: "form-for-item form-control" %>
+  <%= u.file_field :image, value: "Profile picture" , class: "form-for-item form-control-file file-field" %>
+  <section class="flex-container first-lastname">
+    <%= u.text_field :firstname, placeholder: "Firstname", class: "form-for-item form-control" %>
+    <%= u.text_field :lastname, placeholder: "Lastname", class: "form-for-item form-control" %>
+  </section>
+  <%= u.password_field :password, placeholder: "Password", class: "form-for-item form-control" %>
+  <%= u.password_field :password_confirmation, placeholder: "Confirm password", class: "form-for-item form-control" %>
 
-    <%= u.submit "Create account"%>
-  <% end %>
-</section>
+  <%= u.submit "Create account", class: "form-for-item button form-control"%>
+<% end %>
+

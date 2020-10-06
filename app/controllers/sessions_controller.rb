@@ -14,7 +14,8 @@ class SessionsController < ApplicationController
       redirect_to home_home_path, success: "You have successfully logged in!"
       #render json: {status: :created, logged_in: true, user: user}
     else
-      render json: {status: 401}
+      redirect_to sessions_index_path, danger: "Access denied, mismatching credentials"
+      #render json: {status: 401}
     end
   end
 

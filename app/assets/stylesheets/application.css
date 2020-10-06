@@ -15,7 +15,7 @@
  */
 
 .flash-messages {
-    width: 40%;
+    width: 30%;
     margin-top: 3rem;
     position: absolute;
     display: flex;
@@ -23,9 +23,19 @@
     justify-content: center;
     align-content: center;
     justify-self: center;
+    font-size: 1.6rem;
 
 }
 
 body{
     flex-direction: column;
 }
+
+.icon {
+    color: #161616;
+    width: 6rem;
+    height: 6rem;
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+

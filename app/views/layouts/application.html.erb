@@ -11,7 +11,8 @@
   </head>
 
   <body class="flex-container">
-    <%= render 'layouts/flash_messages', class: "flash-messages"%>
+
     <%= yield %>
+    <%= render 'layouts/flash_messages', class: "flash-messages"%>
   </body>
 </html>
