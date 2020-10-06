@@ -1,0 +1,56 @@
+<%= image_tag "index.png" %>
+<%= link_to button_tag("Logout"), logout_path %>
+<%= link_to image_tag("index.png"), home_profile_path %>
+<section>
+  <h1>My pinwall</h1>
+  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonoumy eirmod tmpor invidunt ut labore et dolore
+    magna aliquyam erat, sed diam cpluputa. At vero eos et accusam et just.</p>
+</section>
+<section>
+  <% @pictures.each do |p| %>
+
+    <section class="post">
+      <!--   Insert the Picture.image.url-->
+      <article>
+        <%= image_tag(p.image.url) %>
+      </article>
+      <article class="likes">
+        <%= form_for :like do |l| %>
+          <%= l.hidden_field :picture_id, value: p.id %>
+          <%= l.hidden_field :user_id, value: @current_user.id %>
+          <%= l.submit "Like" %>
+        <% end %>
+        <%= @likes.where(picture_id: p.id).count %>
+      </article>
+      <article class="comment-box">
+        <% @comments.each do |c| %>
+          <% if c.picture_id == p.id %>
+            <article class="comment-single">
+              <% user = @users.find(c.user_id) %>
+              <%= image_tag(user.image.url) %>
+              <p><%= c.comment %></p>
+
+            </article>
+          <% end %>
+        <% end %>
+        <article class="comment-new">
+          <!--        insert the image of the current_user-->
+          <%= form_for :comment do |new_comment| %>
+            <%= new_comment.hidden_field :picture_id, value: p.id %>
+            <%= new_comment.text_field :comment, class: "comment-new-input", placeholder: "Comment..." %>
+            <% new_comment.submit 'create comment' %>
+          <% end %>
+        </article>
+      </article>
+    </section>
+  <% end %>
+</section>
+<% if @current_user.email == "aaron@familiehari.ch" %>
+<section>
+  <%= form_for :picture do |p| %>
+    <%= p.file_field :image %>
+    <%= p.text_field :title %>
+    <%= p.submit 'Upload picture' %>
+  <% end %>
+</section>
+<% end %>

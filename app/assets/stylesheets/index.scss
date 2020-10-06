@@ -1,0 +1,80 @@
+.background {
+  background-image: url("bilder/DSC00137B.JPG");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  transform: scale(1.1);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  position: fixed;
+}
+
+.foreground {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.foreground-item {
+  width: 100%;
+  padding: 2rem;
+  justify-items: center;
+  flex-direction: column;
+
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.login-box {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  width: 24rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  font-size: 1.5rem;
+}
+
+.login-box-gui {
+  flex-direction: column;
+}
+
+.form-for{
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.form-for-item {
+  margin-bottom: 1rem;
+}
+
+.submit-button {
+  width: 100%;
+}
+
+.title {
+  color: #FFFFFF;
+  width: 46rem;
+  h1{
+    font-size: 8em;
+    align-self: flex-start;
+    font-weight: bold;
+  }
+  h2{
+    font-size: 4rem;
+    align-self: flex-end;
+  }
+}
+
+.flex-container {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}

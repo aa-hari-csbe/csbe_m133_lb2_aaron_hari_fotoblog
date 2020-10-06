@@ -1,0 +1,26 @@
+<%= link_to image_tag("index.png"), home_home_path%>
+<section>
+  <section>
+    <%= form_with model: @user, url: update_user_path do |i| %>
+      <%= i.file_field :image %>
+      <%= i.submit "Submit" %>
+    <% end %>
+    <%= image_tag(@current_user.image.url) %>
+    <%= link_to "Reset to default image.", default_image_path, method: :put %>
+  </section>
+
+    <%= form_with model: @user, url: update_user_path do |user| %>
+
+    <section>
+    <%= user.text_field :username, value: @current_user.username%>
+      <article>
+        <%= user.text_field :firstname, value: @current_user.firstname%>
+        <%= user.text_field :lastname, value: @current_user.lastname %>
+      </article>
+    </section>
+    <%= user.hidden_field :id, value: @current_user.id %>
+    <%= user.submit "Save changes", data: { confirm: "Are you sure that you want to update your profile?" } %>
+    <% end %>
+
+    <%= link_to "Delete your account", delete_user_path, method: :delete, data: { confirm: "Are you sure that you want to delete your account permenently? \n\r There will be no way to restore your account!" }  %>
+</section>

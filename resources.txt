@@ -1,0 +1,14 @@
+#Sessionhandling
+https://www.youtube.com/watch?v=z18zLCAg7UU&list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j
+https://www.youtube.com/watch?v=FwfsMv2kSX4&list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j&index=2
+https://www.youtube.com/watch?v=_rdNv5ijzrk&list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j&index=3
+https://www.youtube.com/watch?v=1JRdaemJNh4&list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j&index=4
+
+#Flash errors
+https://www.youtube.com/watch?v=jB6UXLsInUA
+
+#Images
+https://stackoverflow.com/questions/22247582/rails-4-saving-images-in-database
+
+#Default value
+https://stackoverflow.com/questions/11871827/adding-a-default-value-to-text-input-in-simple-form
