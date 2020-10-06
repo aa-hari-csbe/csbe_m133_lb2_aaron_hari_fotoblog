@@ -4106,3 +4106,366 @@ Processing by RegistrationsController#registration as HTML
 Completed 200 OK in 791ms (Views: 790.0ms | ActiveRecord: 0.0ms | Allocations: 15141)
 
 
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:54:23 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 15.2ms | Allocations: 3313)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms | Allocations: 5192)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    17:   <%= u.submit "Create account", class: "form-for-item button form-control"%>
+    18: <% end %>
+    19: 
+    20: <%= render "layouts/footer" %>
+  
+app/views/registrations/registration.html.erb:20
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-06 15:55:30 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1302)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.7ms | Allocations: 164)
+Completed 200 OK in 4041ms (Views: 4030.8ms | ActiveRecord: 0.0ms | Allocations: 43368)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:55:39 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2604)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3591)
+
+
+  
+ActionView::Template::Error (Missing partial ../layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    17:   <%= u.submit "Create account", class: "form-for-item button form-control"%>
+    18: <% end %>
+    19: 
+    20: <%= render "../layouts/footer" %>
+  
+app/views/registrations/registration.html.erb:20
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-06 15:55:51 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 566)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 155)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 3909)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:55:53 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2180)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3167)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    17:   <%= u.submit "Create account", class: "form-for-item button form-control"%>
+    18: <% end %>
+    19: 
+    20: <%= render "/layouts/footer" %>
+  
+app/views/registrations/registration.html.erb:20
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-06 15:56:13 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 562)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 155)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 3875)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:56:14 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2173)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 3163)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/__footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    17:   <%= u.submit "Create account", class: "form-for-item button form-control"%>
+    18: <% end %>
+    19: 
+    20: <%= render "layouts/_footer" %>
+  
+app/views/registrations/registration.html.erb:20
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-06 15:56:37 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1302)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 167)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 12755)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    14: 
+    15:     <%= yield %>
+    16:     <%= render 'layouts/flash_messages', class: "flash-messages"%>
+    17:     <%= render "layouts/footer" %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-06 15:56:38 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 355)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 3415)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    14: 
+    15:     <%= yield %>
+    16:     <%= render 'layouts/flash_messages', class: "flash-messages"%>
+    17:     <%= render "layouts/footer" %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-06 15:56:38 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 343)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3372)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    14: 
+    15:     <%= yield %>
+    16:     <%= render 'layouts/flash_messages', class: "flash-messages"%>
+    17:     <%= render "layouts/footer" %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-06 15:56:39 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 343)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.6ms | Allocations: 18)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3372)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    14: 
+    15:     <%= yield %>
+    16:     <%= render 'layouts/flash_messages', class: "flash-messages"%>
+    17:     <%= render "layouts/footer" %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-06 15:56:40 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 343)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3372)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    14: 
+    15:     <%= yield %>
+    16:     <%= render 'layouts/flash_messages', class: "flash-messages"%>
+    17:     <%= render "layouts/footer" %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-06 15:56:41 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 340)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3365)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    14: 
+    15:     <%= yield %>
+    16:     <%= render 'layouts/flash_messages', class: "flash-messages"%>
+    17:     <%= render "layouts/footer" %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:57:04 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1018)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 155)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 5498)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    14: 
+    15:     <%= yield %>
+    16:     <%= render 'layouts/flash_messages', class: "flash-messages"%>
+    17:     <%= render 'layouts/footer' %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:57:05 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.5ms | Allocations: 618)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 3644)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    14: 
+    15:     <%= yield %>
+    16:     <%= render 'layouts/flash_messages', class: "flash-messages"%>
+    17:     <%= render 'layouts/footer' %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:57:17 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.9ms | Allocations: 893)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 155)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4218)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:58:02 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.1ms | Allocations: 893)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 155)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 5391)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/vm/workspace/fotoblog/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actiontext-6.0.3.3/app/views"
+  * "/home/vm/.rvm/gems/ruby-2.7.1/gems/actionmailbox-6.0.3.3/app/views"
+):
+    14: 
+    15:     <%= yield %>
+    16:     <%= render 'layouts/flash_messages', class: "flash-messages"%>
+    17:   <%= render 'layouts/footer' %>
+    18:   </body>
+    19: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:58:57 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.2ms | Allocations: 893)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 155)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 80)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4497)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-06 15:59:12 +0200
+Processing by HomeController#home as HTML
+Redirected to http://127.0.0.1:9292/sessions/index
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-06 15:59:12 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 559)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 157)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3873)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:59:14 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1183)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3841)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 15:59:58 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1183)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.8ms | Allocations: 157)
+Completed 200 OK in 3006ms (Views: 3005.6ms | ActiveRecord: 0.0ms | Allocations: 28612)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-06 16:00:03 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 684)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2780)
+
+
