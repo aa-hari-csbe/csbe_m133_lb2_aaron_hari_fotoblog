@@ -12759,3 +12759,2495 @@ Processing by SessionsController#index as HTML
 Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 3294)
 
 
+Started POST "/" for 127.0.0.1 at 2020-10-07 15:05:06 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3PGJAV1D1FFfA40WR08RBlmCANk5H8sEb2GAN0XZhaZ8A1VYHkVTxqLQfpnvXOrQYxWJMZo1lljuWKGoWh3SjQ==", "user"=>{"email"=>"aaron@familiehari.ch", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaron@familiehari.ch"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 178ms (ActiveRecord: 0.1ms | Allocations: 930)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:05:07 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 976)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 21)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 3842)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-10-07 15:05:09 +0200
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+Redirected to http://127.0.0.1:9292/sessions/index
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 892)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-07 15:05:09 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 344)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 2512)
+
+
+Started POST "/" for 127.0.0.1 at 2020-10-07 15:05:12 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"TTvSHUQDlv/47uyI0HHfoF0nKqtS4yu69MeKgp74Evl9CXxHzOYcQ6iHLW/Oj51TS/XLRMzTtXNiWTOycbPZ8A==", "user"=>{"email"=>"d@s", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@s"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 182ms (ActiveRecord: 0.1ms | Allocations: 903)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:05:12 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 3500)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:05:15 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 3470)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:05:43 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 706ms (Views: 703.9ms | ActiveRecord: 0.6ms | Allocations: 22059)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:06:27 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 3478)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-10-07 15:06:46 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-10-07 15:06:49 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 340)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 2501)
+
+
+Started POST "/" for 127.0.0.1 at 2020-10-07 15:07:06 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"lNXGHMhrbUlhjrLswuY321FoNeM1j1eEX2xtRZAgRmtb+TqsYbEH1+eAYm2m3cUHKGahIV9m4Nb8/r1MMuq7AQ==", "user"=>{"email"=>"d@s", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@s"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 213ms (ActiveRecord: 2.2ms | Allocations: 905)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:07:07 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 3481)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:07:13 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered home/profile.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1343)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 4249)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:07:29 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.7ms | Allocations: 810)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 3574)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:07:33 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 6.0ms | Allocations: 803)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 3552)
+
+
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:08:19 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"xZnvtDPn997Gx9KcydgUqQxxphvakHoqMuCYmkEo/9UHFitCBy7zVha5FU4NU0AJpNMjoHAac+SVi4efkjXANw==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x000055acb47fee58 @tempfile=#<Tempfile:/tmp/RackMultipart20201007-104693-1e15qcy.jpg>, @original_filename="DSC01338B.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"DSC01338B.jpg\"\r\nContent-Type: image/jpeg\r\n">, "username"=>"daniel schmitz", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+[paperclip] Trying to link /tmp/RackMultipart20201007-104693-1e15qcy.jpg to /tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-13v9n1s.jpg
+[paperclip] Trying to link /tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-13v9n1s.jpg to /tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-6nlk4q.jpg
+Command :: file -b --mime '/tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-6nlk4q.jpg'
+  [1m[35m (2.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] Trying to link /tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-13v9n1s.jpg to /tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-1s5b46e.jpg
+Command :: file -b --mime '/tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-1s5b46e.jpg'
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", "DSC01338B.jpg"], ["image_file_size", 15518323], ["image_updated_at", "2020-10-07 13:08:19.309867"], ["updated_at", "2020-10-07 13:08:19.346213"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] deleting /home/vm/workspace/fotoblog/public/system/users/images/000/000/002/original/DSC02954B.JPG
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 74ms (ActiveRecord: 7.6ms | Allocations: 13916)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:08:19 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 652)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 3497)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:08:23 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.3ms | Allocations: 803)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3572)
+
+
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:09:10 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"cYLlThEs1LYDEz1KyNgRyux44M/WSHZCd7P8uCW2RESzDSG4JeXQPtNt+pgMU0VqRNpldHzCf4zQ2OO99qt7pg==", "user"=>{"username"=>"daniel schmitz2", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "daniel schmitz2"], ["image_file_name", nil], ["image_content_type", nil], ["image_file_size", nil], ["image_updated_at", nil], ["updated_at", "2020-10-07 13:09:10.253734"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] deleting /home/vm/workspace/fotoblog/public/system/users/images/000/000/002/original/DSC01338B.jpg
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 32ms (ActiveRecord: 3.9ms | Allocations: 7339)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:09:10 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 3487)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:09:11 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.9ms | Allocations: 745)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 3491)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:09:11 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:09:18 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.5ms | Allocations: 745)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 1.0ms | Allocations: 3497)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:09:19 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:09:21 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"1kXIhfpD54VfJ5QGfyRB9mPp4tMIapnR8ER+ViAZkC4UygxzzorjDY9ZU9S7rxVWy0tnaKLgkB9XL2FT8wSvzA==", "user"=>{"username"=>"daniel schmitz2", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 74ms (ActiveRecord: 0.9ms | Allocations: 4542)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:09:21 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 7.0ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 21)
+Completed 200 OK in 57ms (Views: 30.3ms | ActiveRecord: 0.3ms | Allocations: 3473)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:09:23 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 8.3ms | Allocations: 745)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 56ms (Views: 46.6ms | ActiveRecord: 0.2ms | Allocations: 3497)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:09:23 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:09:24 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 2.7ms | Allocations: 745)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 6.1ms | ActiveRecord: 0.9ms | Allocations: 3510)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:09:24 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:09:29 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"fuQgi+q+RDrgAsnBpNL8xJirJ2bFXbEt/1y1IrKsz4K8a+R93ndAsjB8DhNgWahkMAmi3W/XuONYN6onYbHwYA==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fcaf589dd58 @tempfile=#<Tempfile:/tmp/RackMultipart20201007-104693-1fkjchd.JPG>, @original_filename="DSC02954B.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"DSC02954B.JPG\"\r\nContent-Type: image/jpeg\r\n">, "username"=>"daniel schmitz2", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+[paperclip] Trying to link /tmp/RackMultipart20201007-104693-1fkjchd.JPG to /tmp/60ebf36514921f27e5266f03f4930cd820201007-104693-1kdn62g.JPG
+[paperclip] Trying to link /tmp/60ebf36514921f27e5266f03f4930cd820201007-104693-1kdn62g.JPG to /tmp/60ebf36514921f27e5266f03f4930cd820201007-104693-1i4g9mf.JPG
+Command :: file -b --mime '/tmp/60ebf36514921f27e5266f03f4930cd820201007-104693-1i4g9mf.JPG'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] Trying to link /tmp/60ebf36514921f27e5266f03f4930cd820201007-104693-1kdn62g.JPG to /tmp/60ebf36514921f27e5266f03f4930cd820201007-104693-p8eg1b.JPG
+Command :: file -b --mime '/tmp/60ebf36514921f27e5266f03f4930cd820201007-104693-p8eg1b.JPG'
+  [1m[36mUser Update (5.3ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", "DSC02954B.JPG"], ["image_content_type", "image/jpeg"], ["image_file_size", 19764642], ["image_updated_at", "2020-10-07 13:09:29.687408"], ["updated_at", "2020-10-07 13:09:29.721992"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 73ms (ActiveRecord: 8.8ms | Allocations: 13131)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:09:29 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 3482)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:09:31 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 2.4ms | Allocations: 803)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 3564)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:10:13 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 1.2ms | Allocations: 83)
+  Rendered home/profile.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1452)
+  Rendered layouts/_flash_messages.html.erb (Duration: 1.0ms | Allocations: 154)
+Completed 200 OK in 40ms (Views: 24.9ms | ActiveRecord: 3.0ms | Allocations: 5411)
+
+
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:10:18 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"SKdZp9guzrKh+Yt3k45D0QEpbtuDpRZmodsE81UBbOF3bxC0a9TS2Uo0vgpaA/oXtDOBwOpgmxecEQW3acndYA==", "user"=>{"username"=>"daniel schmitz4", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "daniel schmitz4"], ["image_file_name", nil], ["image_content_type", nil], ["image_file_size", nil], ["image_updated_at", nil], ["updated_at", "2020-10-07 13:10:18.547958"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] deleting /home/vm/workspace/fotoblog/public/system/users/images/000/000/002/original/DSC02954B.JPG
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 23ms (ActiveRecord: 3.8ms | Allocations: 7341)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:10:18 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1255)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 4228)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:10:19 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.5ms | Allocations: 811)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 3555)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:10:19 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:10:33 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.4ms | Allocations: 808)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 3555)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:10:33 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:10:41 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"EJWmwlm0RYkPSFQZnLtx36ht87F8GAwr5PF9Z+YwmcAvXe/R6k5Z4uSFYWRVNsgZHXccqhXdgVrZO3wj2vgoQQ==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x000055acb45d9ad8 @tempfile=#<Tempfile:/tmp/RackMultipart20201007-104693-cahoyv.JPG>, @original_filename="DSC00082B.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"DSC00082B.JPG\"\r\nContent-Type: image/jpeg\r\n">, "username"=>"daniel schmitz4", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+[paperclip] Trying to link /tmp/RackMultipart20201007-104693-cahoyv.JPG to /tmp/39ff03059c68d564758a02f536c6b74b20201007-104693-1e61s5v.JPG
+[paperclip] Trying to link /tmp/39ff03059c68d564758a02f536c6b74b20201007-104693-1e61s5v.JPG to /tmp/39ff03059c68d564758a02f536c6b74b20201007-104693-1b0y3m4.JPG
+Command :: file -b --mime '/tmp/39ff03059c68d564758a02f536c6b74b20201007-104693-1b0y3m4.JPG'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] Trying to link /tmp/39ff03059c68d564758a02f536c6b74b20201007-104693-1e61s5v.JPG to /tmp/39ff03059c68d564758a02f536c6b74b20201007-104693-5qwti0.JPG
+Command :: file -b --mime '/tmp/39ff03059c68d564758a02f536c6b74b20201007-104693-5qwti0.JPG'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", "DSC00082B.JPG"], ["image_content_type", "image/jpeg"], ["image_file_size", 15319511], ["image_updated_at", "2020-10-07 13:10:41.825386"], ["updated_at", "2020-10-07 13:10:41.843953"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 35ms (ActiveRecord: 2.9ms | Allocations: 13146)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:10:41 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 3488)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:10:42 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.4ms | Allocations: 908)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 3667)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:03 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 83)
+  Rendered home/profile.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1353)
+  Rendered layouts/_flash_messages.html.erb (Duration: 1.6ms | Allocations: 154)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.2ms | Allocations: 5322)
+
+
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:06 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"fZnCFBWNEKS2PsnSOidKYpdUI1jDNpqRLK0R/OVuBa1CUYsHpncMz13z/K/zqvOkIk7MQ6rzF+ARZxC42aa0LA==", "user"=>{"username"=>"daniel schmitz4", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", nil], ["image_content_type", nil], ["image_file_size", nil], ["image_updated_at", nil], ["updated_at", "2020-10-07 13:11:06.116401"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] deleting /home/vm/workspace/fotoblog/public/system/users/images/000/000/002/original/DSC00082B.JPG
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 14ms (ActiveRecord: 4.4ms | Allocations: 7319)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:11:06 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1252)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 4225)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:07 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.0ms | Allocations: 749)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3500)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:11:07 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:12 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"vvzPH0nzGkRz841kf1Pa+4Rml83mqAO1jLL2ClBNNuGBNIYM+gkGL5g+uBm23mM9MXx41o9tjsSxePdObIWHYA==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fcaf589cbd8 @tempfile=#<Tempfile:/tmp/RackMultipart20201007-104693-19a1pjy.JPG>, @original_filename="DSC03114B.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"DSC03114B.JPG\"\r\nContent-Type: image/jpeg\r\n">, "username"=>"daniel schmitz4", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+[paperclip] Trying to link /tmp/RackMultipart20201007-104693-19a1pjy.JPG to /tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-12nuw3l.JPG
+[paperclip] Trying to link /tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-12nuw3l.JPG to /tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-txi7ze.JPG
+Command :: file -b --mime '/tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-txi7ze.JPG'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] Trying to link /tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-12nuw3l.JPG to /tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-1ar8o73.JPG
+Command :: file -b --mime '/tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-1ar8o73.JPG'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", "DSC03114B.JPG"], ["image_content_type", "image/jpeg"], ["image_file_size", 10616126], ["image_updated_at", "2020-10-07 13:11:12.543925"], ["updated_at", "2020-10-07 13:11:12.568045"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 39ms (ActiveRecord: 2.1ms | Allocations: 13124)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:11:12 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 6.1ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 3494)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:13 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.6ms | Allocations: 809)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 3574)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:32 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered home/profile.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1452)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 154)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 5417)
+
+
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:34 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"nWtBGBiq34nRR2bmBZ+qdmqch1PnYgoIiiV/EIkCUayiowgLq1DD4jqKU5vMEhOw34ZoSI6nh3m3735UtcrgLQ==", "user"=>{"username"=>"daniel schmitz4", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", nil], ["image_content_type", nil], ["image_file_size", nil], ["image_updated_at", nil], ["updated_at", "2020-10-07 13:11:34.284693"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] deleting /home/vm/workspace/fotoblog/public/system/users/images/000/000/002/original/DSC03114B.JPG
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 15ms (ActiveRecord: 3.9ms | Allocations: 7324)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:11:34 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1252)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 4205)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:35 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.0ms | Allocations: 811)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 3574)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:11:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:41 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"or6CxImWVUbS9Jr9JLvhW9ucSuii/JRWjt0iVBxYx4qddsvXOmxJLTk5r4DtNlidboal88s5GSezFyMQIJB2Cw==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fcaf589e028 @tempfile=#<Tempfile:/tmp/RackMultipart20201007-104693-ccx46x.JPG>, @original_filename="DSC03114B.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"DSC03114B.JPG\"\r\nContent-Type: image/jpeg\r\n">, "username"=>"daniel schmitz4", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+[paperclip] Trying to link /tmp/RackMultipart20201007-104693-ccx46x.JPG to /tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-nnqd1q.JPG
+[paperclip] Trying to link /tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-nnqd1q.JPG to /tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-11vg8pw.JPG
+Command :: file -b --mime '/tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-11vg8pw.JPG'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] Trying to link /tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-nnqd1q.JPG to /tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-12huq4x.JPG
+Command :: file -b --mime '/tmp/dd40ee67ad693ee9a97a956c0828ef6820201007-104693-12huq4x.JPG'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", "DSC03114B.JPG"], ["image_content_type", "image/jpeg"], ["image_file_size", 10616126], ["image_updated_at", "2020-10-07 13:11:41.066648"], ["updated_at", "2020-10-07 13:11:41.083529"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 33ms (ActiveRecord: 1.9ms | Allocations: 13131)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:11:41 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 3482)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:42 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.2ms | Allocations: 908)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3665)
+
+
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:45 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"vLCtzC3dC+/asPJFGwZ4nfCogE0RppFfcbbtFlQ/DQKDeOTfnicXhDF9xzjSi8FbRbJvVnhjHC5MfOxSaPe8gw==", "user"=>{"username"=>"daniel schmitz4d", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "daniel schmitz4d"], ["image_file_name", nil], ["image_content_type", nil], ["image_file_size", nil], ["image_updated_at", nil], ["updated_at", "2020-10-07 13:11:45.216885"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] deleting /home/vm/workspace/fotoblog/public/system/users/images/000/000/002/original/DSC03114B.JPG
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 16ms (ActiveRecord: 2.3ms | Allocations: 7330)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:11:45 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.8ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.9ms | Allocations: 3481)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:46 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.0ms | Allocations: 808)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 3566)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:11:46 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:51 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"aX5IcGlmZdvpCTi//LM5RkGE/YcSxmfHyO+MpzQiLsRWtgFj2px5sALEDcI1PoCA9J4SnHsD6rb1JY3jCOqfRQ==", "user"=>{"username"=>"daniel schmit", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "daniel schmit"], ["updated_at", "2020-10-07 13:11:51.020278"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 12ms (ActiveRecord: 2.1ms | Allocations: 6381)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:11:51 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3466)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:52 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.3ms | Allocations: 808)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 3550)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:11:52 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:53 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 2.0ms | Allocations: 808)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 3566)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:11:53 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:11:57 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"Q6QZ4Xvp//ngKtg7gB7Z9kfgr85MO3dRPdcDXaz4nsl8bFDyyBPjkgvn7UZJk2Aw8vpA1SX++iAAHQIZkDAvSA==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fcaf589cfe8 @tempfile=#<Tempfile:/tmp/RackMultipart20201007-104693-1ncxa0u.jpg>, @original_filename="DSC01338B.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"DSC01338B.jpg\"\r\nContent-Type: image/jpeg\r\n">, "username"=>"daniel schmit", "firstname"=>"Daniel", "lastname"=>"Schmitz", "id"=>"2"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+[paperclip] Trying to link /tmp/RackMultipart20201007-104693-1ncxa0u.jpg to /tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-f5wyx4.jpg
+[paperclip] Trying to link /tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-f5wyx4.jpg to /tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-gjmstj.jpg
+Command :: file -b --mime '/tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-gjmstj.jpg'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@s"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] Trying to link /tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-f5wyx4.jpg to /tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-xnqtan.jpg
+Command :: file -b --mime '/tmp/6cde2e2a1ce8325166b3eff94772586f20201007-104693-xnqtan.jpg'
+  [1m[36mUser Update (2.7ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", "DSC01338B.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 15518323], ["image_updated_at", "2020-10-07 13:11:57.912390"], ["updated_at", "2020-10-07 13:11:57.944840"], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 54ms (ActiveRecord: 8.3ms | Allocations: 13133)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:11:57 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 3494)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:13:04 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1258)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.5ms | Allocations: 155)
+Completed 200 OK in 911ms (Views: 909.0ms | ActiveRecord: 0.3ms | Allocations: 21351)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:13:48 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 656)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 852ms (Views: 850.2ms | ActiveRecord: 0.2ms | Allocations: 20320)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:13:55 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 1027ms (Views: 1025.9ms | ActiveRecord: 0.1ms | Allocations: 20682)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:14:27 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 1212ms (Views: 1206.5ms | ActiveRecord: 1.6ms | Allocations: 22523)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:14:44 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 932ms (Views: 929.5ms | ActiveRecord: 0.4ms | Allocations: 20454)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:15:09 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 768ms (Views: 766.9ms | ActiveRecord: 0.2ms | Allocations: 21293)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:16:51 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 753ms (Views: 751.9ms | ActiveRecord: 0.1ms | Allocations: 22481)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:17:23 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 721ms (Views: 719.6ms | ActiveRecord: 0.1ms | Allocations: 21687)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:17:42 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 737ms (Views: 735.2ms | ActiveRecord: 0.2ms | Allocations: 20338)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:17:53 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 754ms (Views: 753.1ms | ActiveRecord: 0.1ms | Allocations: 23373)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:18:56 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 3465)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:20:29 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 784ms (Views: 781.8ms | ActiveRecord: 0.1ms | Allocations: 20851)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:20:32 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 3480)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:21:05 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 737ms (Views: 735.6ms | ActiveRecord: 0.2ms | Allocations: 21219)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:21:17 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 815ms (Views: 813.1ms | ActiveRecord: 0.2ms | Allocations: 20787)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:22:14 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 705ms (Views: 703.6ms | ActiveRecord: 0.2ms | Allocations: 20847)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:22:16 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 3467)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:22:17 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3460)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:22:18 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 3466)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:22:18 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 3466)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:22:42 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 763ms (Views: 760.9ms | ActiveRecord: 0.2ms | Allocations: 19941)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:23:10 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1258)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.5ms | Allocations: 155)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 5279)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:23:56 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 656)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 750ms (Views: 748.5ms | ActiveRecord: 0.2ms | Allocations: 21635)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:24:12 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 864ms (Views: 862.0ms | ActiveRecord: 0.1ms | Allocations: 22062)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:26:02 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 3452)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:26:03 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3476)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:26:04 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3460)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:26:05 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 3466)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:26:05 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 3460)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:26:05 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 3466)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:28:00 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 839ms (Views: 837.0ms | ActiveRecord: 0.2ms | Allocations: 20710)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:28:13 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 870ms (Views: 867.2ms | ActiveRecord: 0.3ms | Allocations: 22037)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:29:40 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 852ms (Views: 848.7ms | ActiveRecord: 0.3ms | Allocations: 22069)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:29:45 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 3458)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:29:48 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 3470)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:35:41 +0200
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 674)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 831ms (Views: 828.1ms | ActiveRecord: 0.5ms | Allocations: 23046)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:35:59 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 3468)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:37:17 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 18)
+Completed 200 OK in 991ms (Views: 989.7ms | ActiveRecord: 0.1ms | Allocations: 21615)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:38:25 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1438)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.8ms | Allocations: 169)
+Completed 200 OK in 3247ms (Views: 3200.9ms | ActiveRecord: 1.6ms | Allocations: 66934)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:39:58 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 658)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 957ms (Views: 955.1ms | ActiveRecord: 0.3ms | Allocations: 23480)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:40:20 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 653)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 709ms (Views: 708.0ms | ActiveRecord: 0.1ms | Allocations: 22492)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:40:30 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 653)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 764ms (Views: 759.9ms | ActiveRecord: 0.1ms | Allocations: 22986)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:40:36 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 653)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 752ms (Views: 750.3ms | ActiveRecord: 0.2ms | Allocations: 22084)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:41:21 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 927ms (Views: 925.2ms | ActiveRecord: 0.2ms | Allocations: 21234)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:41:38 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 859ms (Views: 857.1ms | ActiveRecord: 0.6ms | Allocations: 22483)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:43:49 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1438)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.6ms | Allocations: 169)
+Completed 200 OK in 2982ms (Views: 2937.7ms | ActiveRecord: 1.1ms | Allocations: 84127)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:44:27 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 658)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 751ms (Views: 749.2ms | ActiveRecord: 0.2ms | Allocations: 21308)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:44:47 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 653)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 749ms (Views: 747.3ms | ActiveRecord: 0.1ms | Allocations: 22564)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:44:57 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 653)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 783ms (Views: 780.7ms | ActiveRecord: 0.1ms | Allocations: 22601)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:45:08 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 4093)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:45:18 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 653)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 4513)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:49:43 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 3468)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:50:51 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 753ms (Views: 750.7ms | ActiveRecord: 0.1ms | Allocations: 22100)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:50:57 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 721ms (Views: 719.0ms | ActiveRecord: 0.2ms | Allocations: 21624)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:51:16 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 756ms (Views: 754.3ms | ActiveRecord: 0.3ms | Allocations: 21720)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:51:31 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 752ms (Views: 751.0ms | ActiveRecord: 0.1ms | Allocations: 22516)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:53:39 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 769ms (Views: 767.8ms | ActiveRecord: 0.2ms | Allocations: 22506)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:53:42 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3480)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:53:43 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3464)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:53:46 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 3470)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:54:51 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 693ms (Views: 691.4ms | ActiveRecord: 0.1ms | Allocations: 21732)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:55:12 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 715ms (Views: 713.9ms | ActiveRecord: 0.2ms | Allocations: 21280)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:55:17 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 768ms (Views: 766.1ms | ActiveRecord: 0.1ms | Allocations: 22098)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:55:29 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 767ms (Views: 765.6ms | ActiveRecord: 0.1ms | Allocations: 22945)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:55:34 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 835ms (Views: 833.3ms | ActiveRecord: 0.1ms | Allocations: 20824)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-10-07 15:55:49 +0200
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+Redirected to http://127.0.0.1:9292/sessions/index
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 914)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-07 15:55:49 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1168)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3917)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-07 15:56:54 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 341)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 2498)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-07 15:57:43 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 560)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 155)
+Completed 200 OK in 769ms (Views: 768.2ms | ActiveRecord: 0.0ms | Allocations: 22946)
+
+
+Started POST "/" for 127.0.0.1 at 2020-10-07 15:57:52 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"i6xYw32GV9KGbYK31KGHVr4Hfs+7CbY9tF+2/3uQ/CBf07Uq+FfY8d6E3etzRoAdKvEKQvwJ69ddfBHrl87D9A==", "user"=>{"email"=>"d@s", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@s"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 187ms (ActiveRecord: 0.2ms | Allocations: 1054)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:57:52 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1253)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 0.2ms | Allocations: 4641)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-10-07 15:57:58 +0200
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+Redirected to http://127.0.0.1:9292/sessions/index
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 876)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-07 15:57:58 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 356)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2536)
+
+
+Started POST "/" for 127.0.0.1 at 2020-10-07 15:58:02 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"S2OSU6Rbz7rUKRxLmTN/Ekv7qxIRKhOWaJHvlG/q6KCSNS49iWkGcjC5Bdtahv6Uqy/QlX3lHM/LHJuSlZTwHw==", "user"=>{"email"=>"aaron@familiehari.ch", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaron@familiehari.ch"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 186ms (ActiveRecord: 0.1ms | Allocations: 897)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:58:02 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1008)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 3836)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:58:55 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 939)
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:58:56 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 962)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 730ms (Views: 728.0ms | ActiveRecord: 0.2ms | Allocations: 31495)
+
+
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 896ms (Views: 894.1ms | ActiveRecord: 0.2ms | Allocations: 22178)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:59:36 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 85)
+  Rendered home/profile.html.erb within layouts/application (Duration: 11.9ms | Allocations: 4795)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.1ms | Allocations: 7691)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:59:42 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.3ms | Allocations: 915)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 3671)
+
+
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 15:59:49 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"elGLCXfNmU+AacPg+epu/Me8wzL9zwb3mosPuQELioJVdgbnCoSeN6KyzpA3soQ9klJq9mT6jTseTD/KLiBLtw==", "user"=>{"username"=>"aa.hari", "firstname"=>"Aaron", "lastname"=>"Hari", "id"=>"1"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "aaron@familiehari.ch"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", nil], ["image_content_type", nil], ["image_file_size", nil], ["image_updated_at", nil], ["updated_at", "2020-10-07 13:59:49.129578"], ["id", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+[paperclip] deleting /home/vm/workspace/fotoblog/public/system/users/images/000/000/001/original/DSC01200.JPG
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 17ms (ActiveRecord: 3.7ms | Allocations: 7987)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:59:49 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 944)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 3784)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 15:59:50 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.2ms | Allocations: 808)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3564)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 15:59:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 15:59:56 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 943)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 3829)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-10-07 16:00:00 +0200
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+Redirected to http://127.0.0.1:9292/sessions/index
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms | Allocations: 875)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-07 16:00:00 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 356)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2525)
+
+
+Started POST "/" for 127.0.0.1 at 2020-10-07 16:00:26 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"jUwhyVPbsECmRQVmRp3HASVB3F2+xYPRnWy3AdVGS9K0wwZ5RKJL4Lo8g/5wnlddFm/i84Se+ZJJAuOfS04Q/Q==", "user"=>{"email"=>"aaron@familiehari.ch", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaron@familiehari.ch"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 183ms (ActiveRecord: 0.2ms | Allocations: 928)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 16:00:26 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 939)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 21)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 3775)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 16:00:57 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1550)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 155)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 5574)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 16:00:59 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 950)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 3754)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 16:02:17 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1547)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 155)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 5546)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 16:02:23 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1546)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 155)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 5540)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 16:02:45 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1528)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 155)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 5530)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 16:02:50 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered home/profile.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1354)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 4250)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 16:02:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 16:02:52 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 930)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 3747)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-07 16:02:55 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.0ms | Allocations: 811)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 3565)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2020-10-07 16:02:55 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-07 16:02:55 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"CsnoZjkkc8FB8dq8Xqs2d0xgweN0tFb9alXWqzdgjtNsws5nx6OaolIIJHtJIfR1GU+OfcWJIo13jmavIyj6xQ==", "user"=>{"username"=>"aa.hari", "firstname"=>"Aaron", "lastname"=>"Hari", "id"=>"1"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:30:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:31)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "aaron@familiehari.ch"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:31:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:31:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms | Allocations: 4564)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 16:02:55 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 921)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 3756)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 16:03:36 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:19
+  Rendered home/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 921)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 18)
+Completed 200 OK in 832ms (Views: 829.8ms | ActiveRecord: 0.4ms | Allocations: 21940)
+
+
