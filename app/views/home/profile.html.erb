@@ -6,13 +6,15 @@
 </a>
 
 <section class="flex-container edit-section">
-  <section>
+  <section class="flex-container reset-upload">
     <%= form_with model: @user, url: update_user_path do |i| %>
-      <%= i.file_field :image %>
-      <%= image_tag @current_user.image.url, class: "image" %>
-      <%= i.submit "Submit" %>
+      <section class="flex-container file-upload">
+        <%= i.file_field :image, id: "file" %>
+        <label for="file"><%= image_tag @current_user.image.url, class: "image" %></label>
+        <%= i.submit "Submit" %>
+      </section>
     <% end %>
-    <%= link_to "Reset to default image.", default_image_path, method: :put %>
+    <%= link_to "Reset image", default_image_path, method: :put, class: "default-image" %>
   </section>
 
   <%= form_with model: @user, url: update_user_path do |user| %>
@@ -32,7 +34,5 @@
 <% end %>
 
 </section>
-
-
 
 <%= render 'layouts/footer' %>

@@ -15,12 +15,33 @@
     gap: 1rem;
   }
 
-  .image {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 5rem;
-    object-fit: cover;
+  .reset-upload {
+    flex-direction: column;
+    align-items: center;
+
+    .default-image {
+      margin-top: 1rem;
+    }
+
+    .file-upload {
+      width: auto;
+      justify-content: space-between;
+      gap: 1rem;
+
+      .image {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 5rem;
+        object-fit: cover;
+      }
+
+      .image:hover {
+        filter: blur(1px);
+        cursor: pointer;
+      }
+    }
   }
+
 
 }
 
@@ -46,3 +67,8 @@
   }
 }
 
+#file {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
