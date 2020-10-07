@@ -4469,3 +4469,1165 @@ Processing by RegistrationsController#registration as HTML
 Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2780)
 
 
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:33:23 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 84)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 13.9ms | Allocations: 2049)
+  Rendered layouts/_flash_messages.html.erb (Duration: 2.2ms | Allocations: 164)
+Completed 200 OK in 2388ms (Views: 2382.6ms | ActiveRecord: 0.0ms | Allocations: 30010)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:37:39 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1186)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.6ms | Allocations: 164)
+Completed 200 OK in 810ms (Views: 808.4ms | ActiveRecord: 0.0ms | Allocations: 18748)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:38:59 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1194)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 160)
+Completed 200 OK in 748ms (Views: 747.1ms | ActiveRecord: 0.0ms | Allocations: 19869)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:39:13 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.6ms | Allocations: 687)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 771ms (Views: 770.1ms | ActiveRecord: 0.0ms | Allocations: 16935)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:39:34 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 675)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 764ms (Views: 763.8ms | ActiveRecord: 0.0ms | Allocations: 17346)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:46:33 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1197)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 1110ms (Views: 1109.5ms | ActiveRecord: 0.0ms | Allocations: 21531)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:47:37 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 940ms (Views: 939.8ms | ActiveRecord: 0.0ms | Allocations: 17286)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:48:12 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 865ms (Views: 864.9ms | ActiveRecord: 0.0ms | Allocations: 18638)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:48:36 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1200)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 154)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 4515)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:48:47 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.0ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 972ms (Views: 971.8ms | ActiveRecord: 0.0ms | Allocations: 17741)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:48:56 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.9ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 1198ms (Views: 1197.0ms | ActiveRecord: 0.0ms | Allocations: 17754)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-10-07 08:48:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:50:29 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"0BOp7A4q45ojLivYjmmnOOexx5Gxj/Bx+R5aRVl4DAqkDbKwoIKIfdqUNkjLT6z3fFBqedoTe/jUPYXqlOBmBg==", "user"=>{"email"=>"sdf@ffk", "username"=>"dsf", "firstname"=>"", "lastname"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sdf@ffk"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:9292/registrations/registration
+Completed 302 Found in 59ms (ActiveRecord: 3.2ms | Allocations: 15981)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:50:29 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1195)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 156)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 4528)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:51:14 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1192)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 154)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 4485)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:51:26 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1192)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.7ms | Allocations: 154)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 4492)
+
+
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:51:28 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"TzgJ80u44C/vgP6Awy//iFc0HwjF0C8ftq9brq27dRA7JhKv5RCLyBY64xCGCfRHzNWy4K5MpJabjIQBYCMfHA==", "user"=>{"email"=>"", "username"=>"", "firstname"=>"", "lastname"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:9292/registrations/registration
+Completed 302 Found in 30ms (ActiveRecord: 0.6ms | Allocations: 4964)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:51:28 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 7.2ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 2809)
+
+
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:51:30 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"O5AIBO7mRY8ML7A0rPXWlzPfrw1jppko10K1PueV+dFPjhNYQE4uaPWVraTp091YqD4C5Qg6EqH6YWqRKg2T3Q==", "user"=>{"email"=>"", "username"=>"", "firstname"=>"", "lastname"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:9292/registrations/registration
+Completed 302 Found in 16ms (ActiveRecord: 0.4ms | Allocations: 4880)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:51:30 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.6ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 2785)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:51:34 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.3ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2775)
+
+
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:51:35 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"JxNDd//YTfQGclzCKmuwVqcjhc4xXaLM1JMFvwxHMfFTDVgrUXAmE//IQVJvTbuZPMIoJlrBKUX5sNoQwd9b/Q==", "user"=>{"email"=>"", "username"=>"", "firstname"=>"", "lastname"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:9292/registrations/registration
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms | Allocations: 4876)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:51:35 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 15.6ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 2791)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:51:37 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.3ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 2764)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:52:16 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1193)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 4499)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:52:45 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1195)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 154)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 4492)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:52:58 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1191)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 154)
+Completed 200 OK in 16ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 4484)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:53:17 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1192)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 154)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 4489)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:54:04 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1191)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 154)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 4491)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:54:14 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1191)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 154)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4492)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:55:01 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1191)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.7ms | Allocations: 154)
+Completed 200 OK in 1023ms (Views: 1022.0ms | ActiveRecord: 0.0ms | Allocations: 19447)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:55:09 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 3.0ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 879ms (Views: 878.4ms | ActiveRecord: 0.0ms | Allocations: 19041)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:55:45 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.2ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 924ms (Views: 923.1ms | ActiveRecord: 0.0ms | Allocations: 17704)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:57:11 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.0ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2780)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:57:21 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.3ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 1403ms (Views: 1402.6ms | ActiveRecord: 0.0ms | Allocations: 19012)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:57:35 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 1325ms (Views: 1324.7ms | ActiveRecord: 0.0ms | Allocations: 17345)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:57:41 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3392)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:58:52 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.4ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 996ms (Views: 995.2ms | ActiveRecord: 0.0ms | Allocations: 16910)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:59:07 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.3ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 954ms (Views: 953.5ms | ActiveRecord: 0.0ms | Allocations: 17300)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:59:09 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 2764)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:59:50 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.5ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 1009ms (Views: 1007.9ms | ActiveRecord: 0.0ms | Allocations: 18111)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 08:59:58 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.6ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 981ms (Views: 979.4ms | ActiveRecord: 0.0ms | Allocations: 18917)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:00:05 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.2ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 1092ms (Views: 1091.1ms | ActiveRecord: 0.0ms | Allocations: 17759)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-10-07 09:08:43 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:08:59 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 3.1ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 2784)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:10:48 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.0ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 959ms (Views: 958.4ms | ActiveRecord: 0.0ms | Allocations: 17044)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:11:05 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.0ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 718ms (Views: 717.1ms | ActiveRecord: 0.0ms | Allocations: 17674)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:11:29 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.1ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 733ms (Views: 732.5ms | ActiveRecord: 0.0ms | Allocations: 16823)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:11:49 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 834ms (Views: 833.6ms | ActiveRecord: 0.0ms | Allocations: 17626)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:12:23 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 805ms (Views: 804.9ms | ActiveRecord: 0.0ms | Allocations: 17662)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:12:30 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.3ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 1018ms (Views: 1017.5ms | ActiveRecord: 0.0ms | Allocations: 17273)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:12:46 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 728ms (Views: 727.3ms | ActiveRecord: 0.0ms | Allocations: 17671)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:12:49 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 2771)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:13:36 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.0ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 696ms (Views: 696.0ms | ActiveRecord: 0.0ms | Allocations: 19819)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:14:06 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.4ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 707ms (Views: 706.2ms | ActiveRecord: 0.0ms | Allocations: 18126)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:14:49 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 728ms (Views: 727.1ms | ActiveRecord: 0.0ms | Allocations: 16648)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:14:52 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 2766)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:14:59 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 713ms (Views: 712.7ms | ActiveRecord: 0.0ms | Allocations: 14086)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:16:38 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 691ms (Views: 690.7ms | ActiveRecord: 0.0ms | Allocations: 15834)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:17:05 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 727ms (Views: 726.6ms | ActiveRecord: 0.0ms | Allocations: 13733)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 09:17:19 +0200
+Processing by HomeController#home as HTML
+Redirected to http://127.0.0.1:9292/sessions/index
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-07 09:17:19 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 576)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 3255)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:17:23 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 2773)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:17:29 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 790ms (Views: 789.3ms | ActiveRecord: 0.0ms | Allocations: 15870)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:18:25 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 79)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1193)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.7ms | Allocations: 159)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 4497)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 09:18:27 +0200
+Processing by HomeController#home as HTML
+Redirected to http://127.0.0.1:9292/sessions/index
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-07 09:18:27 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 559)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3271)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:18:29 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2777)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:19:01 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.2ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 17)
+Completed 200 OK in 742ms (Views: 741.8ms | ActiveRecord: 0.0ms | Allocations: 17031)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:19:05 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 2769)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:20:24 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 80)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1192)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 157)
+Completed 200 OK in 800ms (Views: 799.8ms | ActiveRecord: 0.0ms | Allocations: 19138)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:20:33 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 864ms (Views: 863.3ms | ActiveRecord: 0.0ms | Allocations: 20311)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:24:14 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 84)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1197)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 154)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 4489)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:24:16 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 2794)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:24:17 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 2771)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:26:53 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1195)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 154)
+Completed 200 OK in 18ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 4486)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:27:20 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1196)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.6ms | Allocations: 154)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 4490)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:28:11 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 85)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1197)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.6ms | Allocations: 154)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4493)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:28:21 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 84)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1196)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 154)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 4480)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:32:12 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.2ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 933ms (Views: 931.9ms | ActiveRecord: 0.0ms | Allocations: 17307)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:32:17 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 2783)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:32:23 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 898ms (Views: 897.1ms | ActiveRecord: 0.0ms | Allocations: 18198)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:32:26 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.3ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2781)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:32:45 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.2ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 1157ms (Views: 1155.9ms | ActiveRecord: 0.0ms | Allocations: 20331)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:32:53 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 795ms (Views: 794.8ms | ActiveRecord: 0.0ms | Allocations: 17761)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:33:21 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 719ms (Views: 718.5ms | ActiveRecord: 0.0ms | Allocations: 18992)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:33:27 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 17)
+Completed 200 OK in 724ms (Views: 722.9ms | ActiveRecord: 0.0ms | Allocations: 17675)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:35:35 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 84)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1204)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.5ms | Allocations: 154)
+Completed 200 OK in 823ms (Views: 821.6ms | ActiveRecord: 0.0ms | Allocations: 19451)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:35:52 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 731ms (Views: 730.6ms | ActiveRecord: 0.0ms | Allocations: 17730)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:38:17 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 84)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 13.9ms | Allocations: 1200)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 154)
+Completed 200 OK in 802ms (Views: 797.7ms | ActiveRecord: 0.0ms | Allocations: 19967)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:38:31 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 718ms (Views: 717.9ms | ActiveRecord: 0.0ms | Allocations: 20295)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:38:38 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.0ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 746ms (Views: 745.9ms | ActiveRecord: 0.0ms | Allocations: 17727)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:38:52 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 751ms (Views: 750.5ms | ActiveRecord: 0.0ms | Allocations: 17669)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:39:48 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 703ms (Views: 702.9ms | ActiveRecord: 0.0ms | Allocations: 16880)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:40:45 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 84)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1198)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.7ms | Allocations: 154)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 4506)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:41:13 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 819ms (Views: 818.4ms | ActiveRecord: 0.0ms | Allocations: 19066)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:41:51 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 721ms (Views: 720.9ms | ActiveRecord: 0.0ms | Allocations: 18579)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:42:14 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 680ms (Views: 679.4ms | ActiveRecord: 0.0ms | Allocations: 19010)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:42:24 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 3805)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:42:52 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 687ms (Views: 685.6ms | ActiveRecord: 0.0ms | Allocations: 19428)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:42:59 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 766ms (Views: 765.8ms | ActiveRecord: 0.0ms | Allocations: 18140)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:44:14 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.2ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.8ms | Allocations: 17)
+Completed 200 OK in 694ms (Views: 693.4ms | ActiveRecord: 0.0ms | Allocations: 17775)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:44:23 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 674ms (Views: 673.8ms | ActiveRecord: 0.0ms | Allocations: 19000)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:44:57 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 85)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1203)
+  Rendered layouts/_flash_messages.html.erb (Duration: 1.2ms | Allocations: 154)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 4503)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:45:54 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1195)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 154)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4495)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:47:57 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 5.1ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 953ms (Views: 952.9ms | ActiveRecord: 0.0ms | Allocations: 19027)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:48:06 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 665ms (Views: 664.4ms | ActiveRecord: 0.0ms | Allocations: 18166)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:48:17 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 698ms (Views: 697.1ms | ActiveRecord: 0.0ms | Allocations: 19906)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:48:26 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 705ms (Views: 704.8ms | ActiveRecord: 0.0ms | Allocations: 17803)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:48:40 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 702ms (Views: 701.3ms | ActiveRecord: 0.0ms | Allocations: 18235)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:49:05 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 17)
+Completed 200 OK in 779ms (Views: 778.8ms | ActiveRecord: 0.0ms | Allocations: 17355)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:50:43 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 722ms (Views: 721.9ms | ActiveRecord: 0.0ms | Allocations: 17713)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:51:12 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 763ms (Views: 763.1ms | ActiveRecord: 0.0ms | Allocations: 19419)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:51:26 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 2771)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 09:51:31 +0200
+Processing by HomeController#home as HTML
+Redirected to http://127.0.0.1:9292/sessions/index
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-07 09:51:31 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 564)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 3247)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:51:39 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.7ms | Allocations: 682)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2782)
+
+
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:51:42 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"u4V0vYSBoGE7DY9kIqSLl2C3F1x3yaxnpU6P+EMPklfPm2/hKinLhsK3kvRngoBY+1a6tBxVJ+6IbVBXjpf4Ww==", "user"=>{"email"=>"", "username"=>"", "firstname"=>"", "lastname"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+  [1m[35m (2.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+  [1m[36mUser Exists? (5.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:9292/registrations/registration
+Completed 302 Found in 27ms (ActiveRecord: 7.9ms | Allocations: 4853)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:51:42 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.8ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 19)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 2804)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-07 09:51:48 +0200
+Processing by HomeController#home as HTML
+Redirected to http://127.0.0.1:9292/sessions/index
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 303)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-07 09:51:48 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 340)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 2469)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-07 09:51:50 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2785)
+
+

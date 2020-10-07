@@ -1,20 +1,24 @@
 <a href="/../home/home" class="icon-link">
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-square-fill icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm9.5 8.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-left icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
   </svg>
 </a>
 <%= form_for :user, :html => {:class => 'flex-container form-for-user'} do |u| %>
   <%= u.email_field :email, placeholder: "Email", class: "form-for-item form-control" %>
   <%= u.text_field :username, placeholder: "Username", class: "form-for-item form-control" %>
-  <%= u.file_field :image, value: "Profile picture" , class: "form-for-item form-control-file file-field" %>
   <section class="flex-container first-lastname">
     <%= u.text_field :firstname, placeholder: "Firstname", class: "form-for-item form-control" %>
     <%= u.text_field :lastname, placeholder: "Lastname", class: "form-for-item form-control" %>
   </section>
   <%= u.password_field :password, placeholder: "Password", class: "form-for-item form-control" %>
   <%= u.password_field :password_confirmation, placeholder: "Confirm password", class: "form-for-item form-control" %>
+  <section class="flex-container submit-and-file-field">
+    <%= u.file_field :image, value: "Profile picture" , class: "form-for-item form-control-file file-field button", id: "file-field" %>
+    <label for="file-field" class="form-for-item form-control button file-upload">Upload profile picture</label>
+    <%= u.submit "Create account", class: "form-for-item button form-control"%>
+  </section>
 
-  <%= u.submit "Create account", class: "form-for-item button form-control"%>
 <% end %>
 
 <%= render 'layouts/footer' %>

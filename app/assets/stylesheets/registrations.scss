@@ -5,22 +5,37 @@
 .form-for-user {
   width: 30%;
   flex-direction: column;
-  margin-top: 6rem;
+  margin-top: 10rem;
   align-self: center;
 
   .form-for-item {
     width: 100%;
   }
 
-  .file-field {
-    height: auto;
+  .submit-and-file-field{
+    justify-content: space-between;
+    width: 100%;
+
+    .file-field {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .file-upload {
+      width: 12rem;
+      text-align:center;
+    }
   }
 
   .button {
     height: 2.5rem;
     width: 10rem;
     align-self: flex-end;
-    content: "Profile picture";
+    cursor: pointer;
   }
 
 }
