@@ -24,13 +24,11 @@
     align-content: center;
     justify-self: center;
     font-size: 1.6rem;
-
 }
 
 body{
     flex-direction: column;
     font-size: 1.3rem;
-
 }
 
 .icon {

@@ -7,12 +7,12 @@
 
 <section class="flex-container edit-section">
   <section class="flex-container reset-upload">
-    <%= form_with model: @user, url: update_user_path do |user| %>
+    <%= form_with model: @user, :html => {:class => 'form-with'}, url: update_user_path do |user| %>
       <section class="flex-container file-upload">
         <%= user.file_field :image, id: "file" %>
         <label for="file"><%= image_tag @current_user.image.url, class: "image" %></label>
       </section>
-      <%= link_to "Reset image", default_image_path, method: :put, class: "default-image" %>
+      <%= link_to "Reset image", default_image_path, method: :put, class: "default-image form-control" %>
       </section>
 
 
