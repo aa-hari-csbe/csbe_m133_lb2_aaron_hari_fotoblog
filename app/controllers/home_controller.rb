@@ -28,7 +28,7 @@ class HomeController < ApplicationController
       end
     else
       @user = User.find(params['user']['id'])
-      @user.update_attributes(username: params['user']['username'], firstname: params['user']['firstname'], lastname: params['user']['lastname'])
+      @user.update_attributes(username: params['user']['username'], firstname: params['user']['firstname'], lastname: params['user']['lastname'], image: params['user']['image'])
       redirect_to home_home_path, success: "You have successfully updated your profile!"
     end
   end

@@ -7,32 +7,30 @@
 
 <section class="flex-container edit-section">
   <section class="flex-container reset-upload">
-    <%= form_with model: @user, url: update_user_path do |i| %>
+    <%= form_with model: @user, url: update_user_path do |user| %>
       <section class="flex-container file-upload">
-        <%= i.file_field :image, id: "file" %>
+        <%= user.file_field :image, id: "file" %>
         <label for="file"><%= image_tag @current_user.image.url, class: "image" %></label>
-        <%= i.submit "Submit" %>
       </section>
+      <%= link_to "Reset image", default_image_path, method: :put, class: "default-image" %>
+      </section>
+
+
+      <section class="flex-container form-for-edit">
+        <%= user.text_field :username, value: @current_user.username, class: "form-for-item form-control" %>
+        <article class="flex-container first-lastname">
+          <%= user.text_field :firstname, value: @current_user.firstname, class: "form-for-item form-control" %>
+          <%= user.text_field :lastname, value: @current_user.lastname, class: "form-for-item form-control" %>
+        </article>
+        <%= user.hidden_field :id, value: @current_user.id %>
+        <section class="flex-container submit-and-delete">
+          <%= link_to "Delete your account", delete_user_path, method: :delete, data: {confirm: "Are you sure that you want to delete your account permenently? \n\r There will be no way to restore your account!"}, class: "form-for-item button delete-account" %>
+          <%= user.submit "Save changes", data: {confirm: "Are you sure that you want to update your profile?"}, class: "form-for-item form-control button" %>
+        </section>
+      </section>
+
     <% end %>
-    <%= link_to "Reset image", default_image_path, method: :put, class: "default-image" %>
-  </section>
 
-  <%= form_with model: @user, url: update_user_path do |user| %>
-
-    <section class="flex-container form-for-edit">
-      <%= user.text_field :username, value: @current_user.username, class: "form-for-item form-control" %>
-      <article class="flex-container first-lastname">
-        <%= user.text_field :firstname, value: @current_user.firstname, class: "form-for-item form-control" %>
-        <%= user.text_field :lastname, value: @current_user.lastname, class: "form-for-item form-control" %>
-      </article>
     </section>
-    <%= user.hidden_field :id, value: @current_user.id %>
-    <section class="flex-container submit-and-delete">
-      <%= link_to "Delete your account", delete_user_path, method: :delete, data: {confirm: "Are you sure that you want to delete your account permenently? \n\r There will be no way to restore your account!"}, class: "form-for-item button delete-account" %>
-      <%= user.submit "Save changes", data: {confirm: "Are you sure that you want to update your profile?"}, class: "form-for-item form-control button" %>
-    </section>
-<% end %>
-
-</section>
 
 <%= render 'layouts/footer' %>
