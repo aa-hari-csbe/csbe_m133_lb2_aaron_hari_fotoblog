@@ -1,4 +1,48 @@
-.form-for-edit{
+.form-for-edit {
   width: 100%;
   flex-direction: column;
 }
+
+.edit-section {
+  margin-top: 10rem;
+  justify-content: space-around;
+  width: 60%;
+
+
+  .first-lastname {
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .image {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5rem;
+    object-fit: cover;
+  }
+
+}
+
+.submit-and-delete {
+  justify-content: space-between;
+  width: 100%;
+
+  .button {
+    height: 2.5rem;
+    width: 9rem;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  .form-for-item {
+    text-align: center;
+  }
+
+  .delete-account {
+    color: #a33939;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+  }
+}
+

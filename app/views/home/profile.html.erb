@@ -5,13 +5,13 @@
   </svg>
 </a>
 
-<section class="flex-container">
+<section class="flex-container edit-section">
   <section>
     <%= form_with model: @user, url: update_user_path do |i| %>
       <%= i.file_field :image %>
+      <%= image_tag @current_user.image.url, class: "image" %>
       <%= i.submit "Submit" %>
     <% end %>
-    <%= image_tag(@current_user.image.url) %>
     <%= link_to "Reset to default image.", default_image_path, method: :put %>
   </section>
 
@@ -25,10 +25,14 @@
       </article>
     </section>
     <%= user.hidden_field :id, value: @current_user.id %>
-    <%= user.submit "Save changes", data: {confirm: "Are you sure that you want to update your profile?"}, class: "form-for-item form-control button" %>
-  <% end %>
+    <section class="flex-container submit-and-delete">
+      <%= link_to "Delete your account", delete_user_path, method: :delete, data: {confirm: "Are you sure that you want to delete your account permenently? \n\r There will be no way to restore your account!"}, class: "form-for-item button delete-account" %>
+      <%= user.submit "Save changes", data: {confirm: "Are you sure that you want to update your profile?"}, class: "form-for-item form-control button" %>
+    </section>
+<% end %>
 
-  <%= link_to "Delete your account", delete_user_path, method: :delete, data: {confirm: "Are you sure that you want to delete your account permenently? \n\r There will be no way to restore your account!"} %>
 </section>
+
+
 
 <%= render 'layouts/footer' %>
