@@ -12,6 +12,15 @@
     width: 100%;
   }
 
+  .form-for-item:hover {
+    background-color: #fafafa;
+  }
+
+  .form-for-item:focus {
+    background-color: #fafafa;
+  }
+
+
   .submit-and-file-field{
     justify-content: space-between;
     width: 100%;

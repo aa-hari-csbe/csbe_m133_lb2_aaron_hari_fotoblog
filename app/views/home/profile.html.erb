@@ -1,5 +1,11 @@
-<%= link_to image_tag("index.png"), home_home_path%>
-<section>
+<a href="/../home/home" class="icon-link">
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-left icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+  </svg>
+</a>
+
+<section class="flex-container">
   <section>
     <%= form_with model: @user, url: update_user_path do |i| %>
       <%= i.file_field :image %>
@@ -9,18 +15,20 @@
     <%= link_to "Reset to default image.", default_image_path, method: :put %>
   </section>
 
-    <%= form_with model: @user, url: update_user_path do |user| %>
+  <%= form_with model: @user, url: update_user_path do |user| %>
 
-    <section>
-    <%= user.text_field :username, value: @current_user.username%>
-      <article>
-        <%= user.text_field :firstname, value: @current_user.firstname%>
-        <%= user.text_field :lastname, value: @current_user.lastname %>
+    <section class="flex-container form-for-edit">
+      <%= user.text_field :username, value: @current_user.username, class: "form-for-item form-control" %>
+      <article class="flex-container first-lastname">
+        <%= user.text_field :firstname, value: @current_user.firstname, class: "form-for-item form-control" %>
+        <%= user.text_field :lastname, value: @current_user.lastname, class: "form-for-item form-control" %>
       </article>
     </section>
     <%= user.hidden_field :id, value: @current_user.id %>
-    <%= user.submit "Save changes", data: { confirm: "Are you sure that you want to update your profile?" } %>
-    <% end %>
+    <%= user.submit "Save changes", data: {confirm: "Are you sure that you want to update your profile?"}, class: "form-for-item form-control button" %>
+  <% end %>
 
-    <%= link_to "Delete your account", delete_user_path, method: :delete, data: { confirm: "Are you sure that you want to delete your account permenently? \n\r There will be no way to restore your account!" }  %>
+  <%= link_to "Delete your account", delete_user_path, method: :delete, data: {confirm: "Are you sure that you want to delete your account permenently? \n\r There will be no way to restore your account!"} %>
 </section>
+
+<%= render 'layouts/footer' %>
