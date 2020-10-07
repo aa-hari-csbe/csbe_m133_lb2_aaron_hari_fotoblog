@@ -1,3 +1,50 @@
+.title-picture {
+  background-image: url("bilder/DSC00697-HDRB.JPG");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  transform: scale(1.1);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  position: absolute;
+}
+
+.foreground {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+
+  .logout-and-profile {
+    justify-content: space-between;
+
+    .logout-button {
+      margin-left: 4rem;
+    }
+
+    .profile-icon-link {
+
+      .profile-icon {
+        margin-right: 4rem;
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
 .post {
   display: flex;
   display: -webkit-flex;
@@ -39,5 +86,9 @@
 
 .comment-new-input {
   width: 100%;
+}
+
+body {
+  overflow-x: hidden;
 }
 
