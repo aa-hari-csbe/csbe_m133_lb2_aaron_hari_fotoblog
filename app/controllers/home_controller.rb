@@ -9,28 +9,21 @@ class HomeController < ApplicationController
   end
 
 
-
-
   def profile
     @users = User.all
     @user = @current_user
   end
 
 
-
   def update
-    if params[:commit] == "Submit"
-      @user = User.find(@current_user.id)
-      if @user.update_attributes(image_params)
-        redirect_to home_profile_path, success: "You have successfully uploaded your image!"
-      else
-        redirect_to home_profile_path, danger: "Try it again, the picture couldn't be updated."
-      end
+    if params['user']['image'] == nil
+      @user = User.find(params['user']['id'])
+      @user.update_attributes(username: params['user']['username'], firstname: params['user']['firstname'], lastname: params['user']['lastname'])
     else
       @user = User.find(params['user']['id'])
       @user.update_attributes(username: params['user']['username'], firstname: params['user']['firstname'], lastname: params['user']['lastname'], image: params['user']['image'])
-      redirect_to home_home_path, success: "You have successfully updated your profile!"
     end
+    redirect_to home_home_path, success: "You have successfully updated your profile!"
   end
 
 
@@ -54,7 +47,8 @@ class HomeController < ApplicationController
       likes.find_by(like_params).destroy
       redirect_to home_home_path, success: "You have successfully unliked #{params['like']['picture_id']}!"
 
-    else params[:commit] == "create comment"
+    else
+      params[:commit] == "create comment"
       comment = Comment.new(comment: params['comment']['comment'], user_id: @current_user.id, picture_id: params['comment']['picture_id'])
       if comment.save
         redirect_to home_home_path, success: "You have successfully posted your comment."
