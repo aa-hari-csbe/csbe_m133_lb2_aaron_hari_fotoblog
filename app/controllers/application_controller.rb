@@ -21,11 +21,13 @@ class ApplicationController < ActionController::Base
   # Checks if a user is logged in, and there for has a valid session cookie.
   def require_login
     if @current_user
+      # Checks if the session cookie of the user is expired or not.
       if session[:expires_at] < Time.current
         reset_session
         redirect_to sessions_index_path, danger: "Your session has expired"
       end
     else
+      # If no user is logged in, creates a flash primary message.
       redirect_to sessions_index_path, primary: "Your not logged in"
     end
   end
