@@ -12,3 +12,8 @@ https://stackoverflow.com/questions/22247582/rails-4-saving-images-in-database
 
 #Default value
 https://stackoverflow.com/questions/11871827/adding-a-default-value-to-text-input-in-simple-form
+
+#Button
+https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
+https://stackoverflow.com/questions/39034078/add-font-awesome-icon-to-rails-submit
+https://www.cssmatic.com/box-shadow

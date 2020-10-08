@@ -1,16 +1,25 @@
-<%= link_to image_tag("index.png"), sessions_index_path %>
-<section>
-  <%= form_for :user do |u| %>
-    <p><%= u.email_field :email, placeholder: "Email" %></p>
-    <p><%= u.text_field :username, placeholder: "Username" %></p>
-    <p><%= u.file_field :image %></p>
-    <section>
-      <p><%= u.text_field :firstname, placeholder: "Firstname" %></p>
-      <p><%= u.text_field :lastname, placeholder: "Lastname" %></p>
-    </section>
-    <p><%= u.password_field :password, placeholder: "Password" %></p>
-    <p><%= u.password_field :password_confirmation, placeholder: "Confirm password" %></p>
+<a href="/../sessions/index" class="icon-link">
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-left icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+  </svg>
+</a>
+<%= form_for :user, :html => {:class => 'flex-container form-for-user'} do |u| %>
+  <%= u.email_field :email, placeholder: "Email", class: "form-for-item form-control" %>
+  <%= u.text_field :username, placeholder: "Username", class: "form-for-item form-control" %>
+  <section class="flex-container first-lastname">
+    <%= u.text_field :firstname, placeholder: "Firstname", class: "form-for-item form-control" %>
+    <%= u.text_field :lastname, placeholder: "Lastname", class: "form-for-item form-control" %>
+  </section>
+  <%= u.password_field :password, placeholder: "Password", class: "form-for-item form-control" %>
+  <%= u.password_field :password_confirmation, placeholder: "Confirm password", class: "form-for-item form-control" %>
+  <section class="flex-container submit-and-file-field">
+    <%= u.file_field :image, value: "Profile picture" , class: "form-for-item form-control-file file-field button", id: "file-field" %>
+    <label for="file-field" class="form-for-item form-control button file-upload">Upload profile picture</label>
+    <%= u.submit "Create account", class: "form-for-item button form-control"%>
+  </section>
 
-    <%= u.submit "Create account"%>
-  <% end %>
-</section>
+<% end %>
+
+<%= render 'layouts/footer' %>
+

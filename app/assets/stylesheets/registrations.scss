@@ -1,3 +1,63 @@
 // Place all the styles related to the registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.form-for-user {
+  width: 30%;
+  flex-direction: column;
+  margin-top: 10rem;
+  align-self: center;
+
+  .form-for-item {
+    width: 100%;
+  }
+
+  .form-for-item:hover {
+    background-color: #fafafa;
+  }
+
+  .form-for-item:focus {
+    background-color: #fafafa;
+  }
+
+
+  .submit-and-file-field{
+    justify-content: space-between;
+    width: 100%;
+
+    .file-field {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .file-upload {
+      width: 12rem;
+      text-align:center;
+    }
+  }
+
+  .button {
+    height: 2.5rem;
+    width: 10rem;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+}
+
+
+.first-lastname {
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+
+}
+
+.icon-link {
+  align-self: start;
+}
+

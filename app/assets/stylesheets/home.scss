@@ -1,43 +1,191 @@
-.post {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  height: 20rem;
-  margin-bottom: 3rem;
+.title-picture {
+  background-image: url("bilder/DSC00697-HDRB.JPG");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  transform: scale(1.1);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  position: absolute;
 }
 
-.likes{
-  margin: 2rem;
-}
-
-
-.comment-box {
-  overflow-x: hidden;
-  overflow-y: scroll;
+.foreground-home {
+  position: absolute !important;
+  top: 0;
+  width: 100%;
   height: 100%;
-  background-color: #E1E1E1;
-  width: 15rem;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+  justify-content: space-around;
+  flex-direction: column !important;
+  align-content: center;
 
-.comment-single{
-  border-bottom: #FFFFFF 2px solid;
-  p {
+  .title {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    margin-top: 0;
 
-    margin: 0.5rem;
+    h1 {
+      margin-top: -25rem;
+      margin-bottom: 0;
+      font-size: 8rem;
+      width: 41rem;
+    }
+
+    p {
+      font-size: 2rem;
+      align-self: flex-end;
+      margin-top: 4rem;
+      width: 70%;
+    }
   }
+
+  .logout-and-profile {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -20rem;
+
+    .logout-button {
+      margin-left: 4rem;
+      width: 8rem;
+      border: 1px;
+      cursor: pointer;
+    }
+
+    .logout-button:hover {
+      background-color: #fafafa;
+      color: #a33939;
+      -webkit-box-shadow: 1px 1px 5px 0px rgba(22,22,22,1);
+      -moz-box-shadow: 1px 1px 5px 0px rgba(22,22,22,1);
+      box-shadow: 1px 1px 5px 0px rgba(22,22,22,1);
+    }
+
+    .profile-icon-link {
+
+      .profile-icon {
+        margin-right: 4rem;
+        margin-left: 0 !important;
+      }
+    }
+  }
+
 }
 
-.comment-new{
-  position: sticky;
-  top: 100%;
-  width: 100%;
+
+.posts-box {
+  margin-top: 120vh;
+
+
+  .post {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    height: 30rem;
+    margin-bottom: 10rem;
+
+    .post-image {
+      width: 40rem;
+      height: 30rem;
+      object-fit: cover;
+      transition: transform 400ms;
+    }
+
+    .post-image:hover {
+      transform: scale(1.5);
+
+      body {
+        filter: blur(5px);
+      }
+    }
+
+    .likes {
+      width: 4rem;
+      margin: 2rem;
+      flex-direction: column;
+
+
+      .like {
+        border-width: 0;
+        cursor: pointer;
+        padding-left: 1px;
+
+        .like-icon {
+          height: 4rem;
+          width: 4rem;
+        }
+
+        .svg-unlike {
+          color: #ed4956;
+        }
+      }
+
+      .quantity-likes {
+        margin-top: 2.5rem;
+        padding-right: 10px;
+      }
+    }
+
+    .comment-box {
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 100%;
+      background-color: #E1E1E1;
+      width: 25rem;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .comment-single {
+        padding: 1rem;
+        border-bottom: #FFFFFF 3px solid;
+        gap: 2rem;
+
+
+        .profile-picture {
+          width: 3rem !important;
+          height: 3rem !important;
+          border-radius: 1.5rem;
+          object-fit: cover !important;
+        }
+
+        .comment {
+          margin: 0.5rem;
+          hyphens: auto;
+          width: 270px;
+        }
+      }
+
+      .comment-new {
+        position: sticky;
+        margin-top: 100%;
+        bottom: 0;
+        width: 100%;
+        scroll-snap-stop: always;
+        background-color: #E1E1E1;
+        border-top: 3px;
+        border-bottom: 0;
+        border-color: #b30b0b;
+
+        .comment-new-input {
+          width: 100%;
+        }
+      }
+
+    }
+  }
+
+
 }
 
-.comment-new-input {
-  width: 100%;
+
+
+
+body {
+  overflow-x: hidden;
 }
 

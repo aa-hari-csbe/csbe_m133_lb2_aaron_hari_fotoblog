@@ -1,43 +1,61 @@
-<%= image_tag "index.png" %>
-<%= link_to button_tag("Logout"), logout_path %>
-<%= link_to image_tag("index.png"), home_profile_path %>
-<section>
-  <h1>My pinwall</h1>
-  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonoumy eirmod tmpor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam cpluputa. At vero eos et accusam et just.</p>
+<section class="title-picture"></section>
+<section class="foreground-home flex-container">
+  <section class="logout-and-profile flex-container">
+    <%= button_to "Logout", logout_path, method: :get, class: "logout-button form-control" %>
+    <a href="/../home/profile" class="profile-icon-link">
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill icon profile-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"/>
+      </svg>
+    </a>
+  </section>
+  <section class="flex-container title">
+    <h1>My pinwall</h1>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonoumy eirmod tmpor invidunt ut labore et
+      dolore
+      magna aliquyam erat, sed diam cpluputa. At vero eos et accusam et just.</p>
+  </section>
 </section>
-<section>
-  <% @pictures.each do |p| %>
 
+<section class="posts-box">
+  <% @pictures.each do |p| %>
     <section class="post">
-      <!--   Insert the Picture.image.url-->
-      <article>
-        <%= image_tag(p.image.url) %>
-      </article>
-      <article class="likes">
+      <%= image_tag p.image.url, class: "post-image" %>
+      <article class="likes flex-container">
         <%= form_for :like do |l| %>
           <%= l.hidden_field :picture_id, value: p.id %>
           <%= l.hidden_field :user_id, value: @current_user.id %>
-          <%= l.submit "Like" %>
+          <% if @likes.find_by(user_id: @current_user.id, picture_id: p.id) != nil %>
+            <%= button_tag type: 'submit', class: "like form-control", :name => "commit", :value => "Unlike" do %>
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill like-icon svg-unlike" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+              </svg>
+            <% end %>
+          <% else %>
+            <%= button_tag type: 'submit', class: "like form-control", :name => "commit", :value => "Like" do %>
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart like-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+              </svg>
+            <% end %>
+          <% end %>
         <% end %>
-        <%= @likes.where(picture_id: p.id).count %>
+        <p class="quantity-likes"><%= @likes.where(picture_id: p.id).count %></p>
       </article>
+
       <article class="comment-box">
         <% @comments.each do |c| %>
           <% if c.picture_id == p.id %>
-            <article class="comment-single">
+            <article class="comment-single flex-container">
               <% user = @users.find(c.user_id) %>
-              <%= image_tag(user.image.url) %>
-              <p><%= c.comment %></p>
-
+              <%= image_tag user.image.url, class: "profile-picture" %>
+              <p class="comment"><%= c.comment %></p>
             </article>
           <% end %>
         <% end %>
-        <article class="comment-new">
-          <!--        insert the image of the current_user-->
+        <article class="comment-new comment-single flex-container">
+          <%= image_tag @current_user.image.url, class: "profile-picture" %>
           <%= form_for :comment do |new_comment| %>
             <%= new_comment.hidden_field :picture_id, value: p.id %>
-            <%= new_comment.text_field :comment, class: "comment-new-input", placeholder: "Comment..." %>
+            <%= new_comment.text_field :comment, class: "comment-new-input form-control", placeholder: "Comment..." %>
             <% new_comment.submit 'create comment' %>
           <% end %>
         </article>
@@ -45,12 +63,13 @@
     </section>
   <% end %>
 </section>
+
 <% if @current_user.email == "aaron@familiehari.ch" %>
-<section>
-  <%= form_for :picture do |p| %>
-    <%= p.file_field :image %>
-    <%= p.text_field :title %>
-    <%= p.submit 'Upload picture' %>
-  <% end %>
-</section>
+  <section>
+    <%= form_for :picture do |p| %>
+      <%= p.file_field :image %>
+      <%= p.text_field :title %>
+      <%= p.submit 'Upload picture' %>
+    <% end %>
+  </section>
 <% end %>

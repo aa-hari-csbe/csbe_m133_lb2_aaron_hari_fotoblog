@@ -1,0 +1,102 @@
+.form-for-edit {
+  flex-direction: column;
+
+  .form-for-item:hover {
+    background-color: #fafafa;
+  }
+
+  .form-for-item:focus {
+    background-color: #fafafa;
+  }
+
+}
+
+.edit-section {
+  margin-top: 15rem;
+  justify-content: space-around;
+  width: 50%;
+
+
+
+  .first-lastname {
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .reset-upload {
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+
+    .default-image {
+      width: 80%;
+      align-self: auto;
+      height: 2.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 0;
+    }
+
+    .file-upload {
+      width: auto;
+      justify-content: space-between;
+
+      .image {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 5rem;
+        object-fit: cover;
+      }
+
+      .image:hover {
+        filter: blur(1px);
+        cursor: pointer;
+      }
+    }
+  }
+
+
+}
+
+.submit-and-delete {
+  justify-content: space-between;
+  width: 100%;
+
+  .button {
+    height: 2.5rem;
+    width: 9rem;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  .form-for-item {
+    text-align: center;
+  }
+
+  .delete-account {
+    color: #a33939;
+    font-size: 1rem;
+    border: 0;
+    background-color: #FFFFFF;
+    text-align: start;
+  }
+
+  .delete-account:hover {
+    background-color: #FFFFFF;
+    text-decoration: underline;
+  }
+}
+
+#file {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.form-with {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
