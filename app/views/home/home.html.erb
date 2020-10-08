@@ -40,6 +40,7 @@
         <% end %>
         <p class="quantity-likes"><%= @likes.where(picture_id: p.id).count%></p>
       </article>
+
       <article class="comment-box">
         <% @comments.each do |c| %>
           <% if c.picture_id == p.id %>
@@ -50,11 +51,11 @@
             </article>
           <% end %>
         <% end %>
-        <article class="comment-new">
-          <!--        insert the image of the current_user-->
+        <article class="comment-new comment-single flex-container">
+          <%= image_tag @current_user.image.url, class: "profile-picture" %>
           <%= form_for :comment do |new_comment| %>
             <%= new_comment.hidden_field :picture_id, value: p.id %>
-            <%= new_comment.text_field :comment, class: "comment-new-input", placeholder: "Comment..." %>
+            <%= new_comment.text_field :comment, class: "comment-new-input form-control", placeholder: "Comment..." %>
             <% new_comment.submit 'create comment' %>
           <% end %>
         </article>
