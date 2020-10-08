@@ -9,8 +9,15 @@ class RegistrationsController < ApplicationController
                     password_confirmation: params['user']['password_confirmation'],
                     username: params['user']['username'],
                     firstname: params['user']['firstname'],
-                    lastname: params['user']['lastname'],
-                    image: params['user']['image'])
+                    lastname: params['user']['lastname'])
+    if params['user']['image'] != nil
+      user.image = params['user']['image']
+    else
+      file = File.open("/home/vm/workspace/fotoblog/app/assets/images/bilder/DSC00697-HDRB.JPG")
+      user.image = file
+      file.close
+    end
+
     if user.save
       session[:user_id] = user.id
       session[:expires_at] = Time.current + @@session_duration

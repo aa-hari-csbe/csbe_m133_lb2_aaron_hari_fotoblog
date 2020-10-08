@@ -81,6 +81,15 @@
       width: 40rem;
       height: 30rem;
       object-fit: cover;
+      transition: transform 400ms;
+    }
+
+    .post-image:hover {
+      transform: scale(1.5);
+
+      body {
+        filter: blur(5px);
+      }
     }
 
     .likes {
