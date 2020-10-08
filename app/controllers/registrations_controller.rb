@@ -13,7 +13,7 @@ class RegistrationsController < ApplicationController
     if params['user']['image'] != nil
       user.image = params['user']['image']
     else
-      file = File.open("/home/vm/workspace/fotoblog/app/assets/images/bilder/DSC00697-HDRB.JPG")
+      file = File.open(@@default_profile_picture_path)
       user.image = file
       file.close
     end

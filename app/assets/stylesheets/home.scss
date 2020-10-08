@@ -44,12 +44,21 @@
   .logout-and-profile {
     justify-content: space-between;
     width: 100%;
-    margin-top: -14rem;
+    margin-top: -20rem;
 
     .logout-button {
       margin-left: 4rem;
-      width: 10rem;
+      width: 8rem;
+      border: 1px;
+      cursor: pointer;
+    }
 
+    .logout-button:hover {
+      background-color: #fafafa;
+      color: #a33939;
+      -webkit-box-shadow: 1px 1px 5px 0px rgba(22,22,22,1);
+      -moz-box-shadow: 1px 1px 5px 0px rgba(22,22,22,1);
+      box-shadow: 1px 1px 5px 0px rgba(22,22,22,1);
     }
 
     .profile-icon-link {

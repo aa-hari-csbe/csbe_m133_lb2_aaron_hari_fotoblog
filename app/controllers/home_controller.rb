@@ -22,7 +22,7 @@ class HomeController < ApplicationController
       redirect_to sessions_index_path, primary: "Your account is deleted."
     elsif params[:commit] == "Reset image"
       @user = User.find(@current_user.id)
-      file = File.open("/home/vm/workspace/fotoblog/app/assets/images/bilder/DSC00697-HDRB.JPG")
+      file = File.open(@@default_profile_picture_path)
       if @user.update_attribute(:image, file)
         redirect_to home_profile_path, success: "You have successfully set your profile picture to the default!"
       end

@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   add_flash_types :danger, :primary, :success
 
   @@session_duration = 60.minutes
+  @@default_profile_picture_path = "/home/vm/workspace/fotoblog/app/assets/images/bilder/DSC00697-HDRB.JPG"
 
   private
 

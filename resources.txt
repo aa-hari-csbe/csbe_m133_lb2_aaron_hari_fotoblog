@@ -16,3 +16,4 @@ https://stackoverflow.com/questions/11871827/adding-a-default-value-to-text-inpu
 #Button
 https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
 https://stackoverflow.com/questions/39034078/add-font-awesome-icon-to-rails-submit
+https://www.cssmatic.com/box-shadow
