@@ -14,9 +14,9 @@
     <section class="login-box-gui flex-container">
       <%= form_for :user do |u|%>
         <section class="flex-container form-for">
-          <%= u.text_field :email, placeholder: "Email", class: "form-for-item" %>
-          <%= u.password_field :password, placeholder: "Password", class: "form-for-item" %>
-          <%= u.submit "Login", class: "submit-button form-for-item"%>
+          <%= u.text_field :email, placeholder: "Email", class: "form-for-item index_form_for_item" %>
+          <%= u.password_field :password, placeholder: "Password", class: "form-for-item index_form_for_item" %>
+          <%= u.submit "Login", class: "submit-button form-for-item index_form_for_item"%>
         </section>
       <% end %>
       <%= link_to "Create a new account!", registrations_registration_path%>
