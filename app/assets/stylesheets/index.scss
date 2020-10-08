@@ -49,6 +49,10 @@
 .form-for{
   flex-direction: column;
   justify-content: space-around;
+
+  .index_form_for_item {
+    width: 90%;
+  }
 }
 
 
@@ -59,9 +63,9 @@
 
 .title {
   color: #FFFFFF;
-  width: 46rem;
+  width: 52rem;
   h1{
-    font-size: 8em;
+    font-size: 8rem;
     align-self: flex-start;
     font-weight: bold;
   }

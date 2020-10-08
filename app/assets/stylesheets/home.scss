@@ -30,7 +30,7 @@
       margin-top: -25rem;
       margin-bottom: 0;
       font-size: 8rem;
-      width: 41rem;
+      width: 49rem;
     }
 
     p {
@@ -44,7 +44,7 @@
   .logout-and-profile {
     justify-content: space-between;
     width: 100%;
-    margin-top: -20rem;
+    margin-top: -18rem;
 
     .logout-button {
       margin-left: 4rem;
@@ -93,13 +93,6 @@
       transition: transform 400ms;
     }
 
-    .post-image:hover {
-      transform: scale(1.5);
-
-      body {
-        filter: blur(5px);
-      }
-    }
 
     .likes {
       width: 4rem;
@@ -157,6 +150,7 @@
           margin: 0.5rem;
           hyphens: auto;
           width: 270px;
+          font-family: "Segoe UI", Sans-Serif;
         }
       }
 
@@ -183,9 +177,14 @@
 }
 
 
-
+.home_footer {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+}
 
 body {
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 

@@ -29,6 +29,7 @@
 body{
     flex-direction: column;
     font-size: 1.3rem;
+    font-family: "Roboto Light", Sans-Serif;
 }
 
 .icon {

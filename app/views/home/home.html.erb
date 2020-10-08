@@ -17,7 +17,7 @@
 </section>
 
 <section class="posts-box">
-  <% @pictures.each do |p| %>
+  <% @pictures.reverse.each do |p| %>
     <section class="post">
       <%= image_tag p.image.url, class: "post-image" %>
       <article class="likes flex-container">
@@ -73,3 +73,7 @@
     <% end %>
   </section>
 <% end %>
+
+<section class="home_footer">
+  <%= render 'layouts/footer', class: "home_footer" %>
+</section>
