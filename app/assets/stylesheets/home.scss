@@ -25,7 +25,7 @@
     display: flex;
     width: 60%;
     flex-direction: column;
-    margin-top: -20rem;
+    margin-top: 0;
 
     h1 {
       margin-top: -25rem;
@@ -45,7 +45,7 @@
   .logout-and-profile {
     justify-content: space-between;
     width: 100%;
-    margin-top: -26rem;
+    margin-top: -14rem;
 
     .logout-button {
       margin-left: 4rem;
@@ -85,8 +85,30 @@
     }
 
     .likes {
+      width: 4rem;
       margin: 2rem;
       flex-direction: column;
+
+
+      .like {
+        border-width: 0;
+        cursor: pointer;
+        padding-left: 1px;
+
+        .like-icon {
+          height: 4rem;
+          width: 4rem;
+        }
+
+        .svg-unlike {
+          color: #a33939;
+        }
+      }
+
+      .quantity-likes {
+        margin-top: 2.5rem;
+        padding-right: 10px;
+      }
     }
 
     .comment-box {
@@ -122,10 +144,6 @@
 }
 
 
-
-
-
-
 .comment-new {
   position: sticky;
   top: 100%;
@@ -135,7 +153,6 @@
     width: 100%;
   }
 }
-
 
 
 body {

@@ -42,17 +42,17 @@ class HomeController < ApplicationController
       else
         redirect_to home_home_path, danger: "Try it again, the picture couldn't be uploaded."
       end
+
     elsif params[:commit] == "Like"
-      likes = Like.all
-      if likes.find_by(like_params) != nil
-        likes.find_by(like_params).destroy
-        redirect_to home_home_path, success: "You have successfully unliked #{params['like']['picture_id']}!"
-      else
-        like = Like.new(like_params)
-        if like.save
-          redirect_to home_home_path, success: "You have successfully liked #{params['like']['picture_id']}!"
-        end
+      like = Like.new(like_params)
+      if like.save
+        redirect_to home_home_path, success: "You have successfully liked #{params['like']['picture_id']}!"
       end
+
+    elsif params[:commit] == "Unlike"
+      likes = Like.all
+      likes.find_by(like_params).destroy
+      redirect_to home_home_path, success: "You have successfully unliked #{params['like']['picture_id']}!"
 
     else params[:commit] == "create comment"
       comment = Comment.new(comment: params['comment']['comment'], user_id: @current_user.id, picture_id: params['comment']['picture_id'])
