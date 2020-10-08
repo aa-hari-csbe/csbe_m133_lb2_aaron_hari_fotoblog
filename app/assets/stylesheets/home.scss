@@ -65,54 +65,78 @@
 }
 
 
+.posts-box {
+  margin-top: 120vh;
 
 
+  .post {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    height: 30rem;
+    margin-bottom: 10rem;
+
+    .post-image {
+      width: 40rem;
+      height: 30rem;
+      object-fit: cover;
+    }
+
+    .likes {
+      margin: 2rem;
+      flex-direction: column;
+    }
+
+    .comment-box {
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 100%;
+      background-color: #E1E1E1;
+      width: 25rem;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      .comment-single {
+        padding: 1rem;
+        border-bottom: #FFFFFF 3px solid;
+        gap: 2rem;
 
 
+        .profile-picture {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 1.5rem;
+          object-fit: cover !important;
+        }
 
-
-.post {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  height: 20rem;
-  margin-bottom: 3rem;
-}
-
-.likes{
-  margin: 2rem;
-}
-
-
-.comment-box {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  height: 100%;
-  background-color: #E1E1E1;
-  width: 15rem;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.comment-single{
-  border-bottom: #FFFFFF 2px solid;
-  p {
-
-    margin: 0.5rem;
+        .comment {
+          margin: 0.5rem;
+        }
+      }
+    }
   }
+
+
 }
 
-.comment-new{
+
+
+
+
+
+.comment-new {
   position: sticky;
   top: 100%;
   width: 100%;
+
+  .comment-new-input {
+    width: 100%;
+  }
 }
 
-.comment-new-input {
-  width: 100%;
-}
+
 
 body {
   overflow-x: hidden;
