@@ -1,24 +1,21 @@
 class SessionsController < ApplicationController
-  def index
-    #render json: {status: "It's working"}
-    #redirect_to sessions_index_path, success: "You have successfully logged ind!"
-  end
 
   def create
-    #Trys to authenticate the user with the email and password that comes along.
+    # Try's to authenticate the user with the email and password that come along.
     user = User.find_by(email: params["user"]["email"]).try(:authenticate, params["user"]["password"])
-    #If the user is successfully authenticated
+    # If the user is successfully authenticated,
+    # a session cookie is created with the defined life span.
     if user
       session[:user_id] = user.id
       session[:expires_at] = Time.current + @@session_duration
       redirect_to home_home_path, success: "You have successfully logged in!"
-      #render json: {status: :created, logged_in: true, user: user}
     else
+      # If the user couldn't be found a flash danger messages gets created.
       redirect_to sessions_index_path, danger: "Access denied, mismatching credentials"
-      #render json: {status: 401}
     end
   end
 
+  # Checks if a user is logged in.
   def logged_in
     if @current_user
       render json: {logged_in: true, user: @current_user}
@@ -27,10 +24,10 @@ class SessionsController < ApplicationController
     end
   end
 
+  # Logs out a user.
   def logout
     reset_session
     redirect_to sessions_index_path, success: "You have successfully logged out."
-    #render json: {status: 200, logged_out: true}
   end
 end
 

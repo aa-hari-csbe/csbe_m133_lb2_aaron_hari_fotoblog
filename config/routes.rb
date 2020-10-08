@@ -1,9 +1,12 @@
+# All the available routs are defined here.
 Rails.application.routes.draw do
+
+  # Defines the available resources.
   resources :sessions, only: [:create, :logout]
   resources :registrations, only: [:create]
+  # Defines the default rout.
   root 'sessions#index'
 
-  #delete :logout, to: 'sessions#logout'
   get :logged_in, to: 'sessions#logged_in'
 
   get '/sessions/index'
