@@ -1,20 +1,27 @@
 class ApplicationController < ActionController::Base
   include CurrentUserConcern
 
+  # CSRF token is skipped.
+  # We authenticate the user in the require_login method.
   skip_before_action :verify_authenticity_token
+  # Skips require_login for the pages
+  # that you don't need to be logged in.
   before_action :require_login, except: [:index, :registration, :create]
 
+  # Defines the Bootstrap flash types.
   add_flash_types :danger, :primary, :success
 
+  # Global variable for the lifespan of a session.
   @@session_duration = 60.minutes
+  # The path of the default profile picture.
   @@default_profile_picture_path = "/home/vm/workspace/fotoblog/app/assets/images/bilder/DSC00697-HDRB.JPG"
 
   private
 
+  # Checks if a user is logged in, and there for has a valid session cookie.
   def require_login
     if @current_user
       if session[:expires_at] < Time.current
-        #render json: {session: session, time: Time.current}
         reset_session
         redirect_to sessions_index_path, danger: "Your session has expired"
       end

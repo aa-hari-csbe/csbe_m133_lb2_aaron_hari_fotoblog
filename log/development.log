@@ -41756,3 +41756,993 @@ Processing by HomeController#home as HTML
 Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.8ms | Allocations: 15779)
 
 
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:19:00 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+Redirected to http://127.0.0.1:9292/sessions/index
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 156ms (ActiveRecord: 0.5ms | Allocations: 9381)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-08 15:19:02 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 730)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.4ms | Allocations: 21)
+Completed 200 OK in 118ms (Views: 114.6ms | ActiveRecord: 0.0ms | Allocations: 3057)
+
+
+Started POST "/" for 127.0.0.1 at 2020-10-08 15:19:07 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"BFCCofoWZN+JobkTyDVXv4+s2QLO4M0eiOYOM8hpW69dzP5vqJXYYIuT4HNaDK9yCz9OUupwQPNq1BDqqLHTRQ==", "user"=>{"email"=>"aaron@familiehari.ch", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaron@familiehari.ch"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 195ms (ActiveRecord: 0.3ms | Allocations: 1039)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:19:07 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 89.6ms | Allocations: 18612)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 138ms (Views: 91.5ms | ActiveRecord: 3.0ms | Allocations: 28299)
+
+
+Started POST "/home/home" for 127.0.0.1 at 2020-10-08 15:19:10 +0200
+Processing by HomeController#create as HTML
+  Parameters: {"authenticity_token"=>"7knpfaioAcwMf7uMbv5VF2wWsxgZW3+rKuLLe7cj1coBwoMDfINt66WrvkacXLJBUOWVbGoxhlL/VnM7CcG5eQ==", "like"=>{"picture_id"=>"5", "user_id"=>"16"}, "commit"=>"Unlike"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."picture_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["picture_id", 5], ["user_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:72:in `create'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:72:in `create'
+  [1m[36mLike Destroy (0.6ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/home_controller.rb:72:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:72:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 49ms (ActiveRecord: 3.1ms | Allocations: 4442)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:19:10 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 69.6ms | Allocations: 13221)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 282ms (Views: 79.8ms | ActiveRecord: 2.1ms | Allocations: 16227)
+
+
+Started POST "/home/home" for 127.0.0.1 at 2020-10-08 15:19:12 +0200
+Processing by HomeController#create as HTML
+  Parameters: {"authenticity_token"=>"tf1P0igBz+T41uIlfDdRjaqbWev9hRjdWGZ/pLygmlRadiWs/Cqjw1EC5++Olbbblmh/n47v4SSN0sfkAkL25w==", "like"=>{"picture_id"=>"5", "user_id"=>"16"}, "commit"=>"Like"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mLike Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mLike Create (1.5ms)[0m  [1m[32mINSERT INTO "likes" ("created_at", "updated_at", "user_id", "picture_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2020-10-08 13:19:12.494271"], ["updated_at", "2020-10-08 13:19:12.494271"], ["user_id", 16], ["picture_id", 5]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:65:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 27ms (ActiveRecord: 4.0ms | Allocations: 8794)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:19:12 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 51.8ms | Allocations: 13228)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 61ms (Views: 55.1ms | ActiveRecord: 3.1ms | Allocations: 16066)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-08 15:22:10 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 6.6ms | Allocations: 984)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 44ms (Views: 12.5ms | ActiveRecord: 1.9ms | Allocations: 12804)
+
+
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-08 15:22:16 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"h8Xlh0GAja+RKi7/bM/BAtqMwdo5Xm4e8rywahv52podEVj18wit2ZkgXB9rYoEH/pgK8Do1vaW5NWwF37NURw==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00005625c21b7b08 @tempfile=#<Tempfile:/tmp/RackMultipart20201008-63034-1nxie7a.JPG>, @original_filename="DSC01390B.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"DSC01390B.JPG\"\r\nContent-Type: image/jpeg\r\n">, "username"=>"aa.hari", "firstname"=>"Aaron", "lastname"=>"Hari", "id"=>"16"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:42:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:43)
+[paperclip] Trying to link /tmp/RackMultipart20201008-63034-1nxie7a.JPG to /tmp/187e4a472c25212b87278882da10698920201008-63034-1djk2ee.JPG
+[paperclip] Trying to link /tmp/187e4a472c25212b87278882da10698920201008-63034-1djk2ee.JPG to /tmp/187e4a472c25212b87278882da10698920201008-63034-yy4pwf.JPG
+Command :: file -b --mime '/tmp/187e4a472c25212b87278882da10698920201008-63034-yy4pwf.JPG'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:43:in `update'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "aaron@familiehari.ch"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:43:in `update'
+[paperclip] Trying to link /tmp/187e4a472c25212b87278882da10698920201008-63034-1djk2ee.JPG to /tmp/187e4a472c25212b87278882da10698920201008-63034-11ethpk.JPG
+Command :: file -b --mime '/tmp/187e4a472c25212b87278882da10698920201008-63034-11ethpk.JPG'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", "DSC01390B.JPG"], ["image_file_size", 19441888], ["image_updated_at", "2020-10-08 13:22:16.188098"], ["updated_at", "2020-10-08 13:22:16.234908"], ["id", 16]]
+  ↳ app/controllers/home_controller.rb:43:in `update'
+[paperclip] deleting /home/vm/workspace/fotoblog/public/system/users/images/000/000/016/original/DSC03114B.JPG
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:43:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 88ms (ActiveRecord: 3.6ms | Allocations: 14372)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:22:16 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (1.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 77.3ms | Allocations: 19725)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 130ms (Views: 80.0ms | ActiveRecord: 8.6ms | Allocations: 29651)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-08 15:22:17 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 3.2ms | Allocations: 915)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 3685)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:22:19 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 16], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 14.9ms | Allocations: 13229)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.9ms | Allocations: 16044)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-10-08 15:22:20 +0200
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+Redirected to http://127.0.0.1:9292/sessions/index
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 885)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-08 15:22:20 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 356)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2674)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-08 15:22:22 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1007)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3726)
+
+
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-08 15:22:36 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"UM4t6jFU/+MV7J9KjsagoVVmMwVY3KGCqfDLYWTabVT+8tQLDfo2m1ukC3aEdGCYDhc1bvV24JLbKpZexE5CrQ==", "user"=>{"email"=>"test@mail", "username"=>"1", "firstname"=>"1", "lastname"=>"1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f513cfe0788 @tempfile=#<Tempfile:/tmp/RackMultipart20201008-63034-1rcma6w.JPG>, @original_filename="DSC01390B.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"DSC01390B.JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create account"}
+[paperclip] Trying to link /tmp/RackMultipart20201008-63034-1rcma6w.JPG to /tmp/187e4a472c25212b87278882da10698920201008-63034-cm4s43.JPG
+[paperclip] Trying to link /tmp/187e4a472c25212b87278882da10698920201008-63034-cm4s43.JPG to /tmp/187e4a472c25212b87278882da10698920201008-63034-174tx9t.JPG
+Command :: file -b --mime '/tmp/187e4a472c25212b87278882da10698920201008-63034-174tx9t.JPG'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@mail"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:21:in `create'
+[paperclip] Trying to link /tmp/187e4a472c25212b87278882da10698920201008-63034-cm4s43.JPG to /tmp/187e4a472c25212b87278882da10698920201008-63034-vaflff.JPG
+Command :: file -b --mime '/tmp/187e4a472c25212b87278882da10698920201008-63034-vaflff.JPG'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/registrations_controller.rb:21:in `create'
+Redirected to http://127.0.0.1:9292/registrations/registration
+Completed 302 Found in 349ms (ActiveRecord: 0.7ms | Allocations: 6393)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-08 15:22:36 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.1ms | Allocations: 673)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.6ms | Allocations: 19)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2858)
+
+
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-08 15:22:48 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"JzKkOqDzB0g0disNce8EftYBOJ6G0DRVoYwulgumPgyJDl3bnF3OMHo+vzF7XcRHjXA+9St6dUXTVnOpqzIR9Q==", "user"=>{"email"=>"test@mail2", "username"=>"12", "firstname"=>"123", "lastname"=>"2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+[paperclip] Trying to link /home/vm/workspace/fotoblog/app/assets/images/bilder/DSC00697-HDRB.JPG to /tmp/9426625656f029d0c7562ee5c76f429120201008-63034-11x4bub.JPG
+[paperclip] Trying to link /tmp/9426625656f029d0c7562ee5c76f429120201008-63034-11x4bub.JPG to /tmp/9426625656f029d0c7562ee5c76f429120201008-63034-77tf21.JPG
+Command :: file -b --mime '/tmp/9426625656f029d0c7562ee5c76f429120201008-63034-77tf21.JPG'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@mail2"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:21:in `create'
+[paperclip] Trying to link /tmp/9426625656f029d0c7562ee5c76f429120201008-63034-11x4bub.JPG to /tmp/9426625656f029d0c7562ee5c76f429120201008-63034-9cglkj.JPG
+Command :: file -b --mime '/tmp/9426625656f029d0c7562ee5c76f429120201008-63034-9cglkj.JPG'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "firstname", "lastname", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test@mail2"], ["password_digest", "$2a$12$Q9bLCpfttG5lk7MbO2liz.cgk6SfA4CATR7wTC.apEwbhwpSSw8He"], ["username", "12"], ["firstname", "123"], ["lastname", "2"], ["created_at", "2020-10-08 13:22:48.460182"], ["updated_at", "2020-10-08 13:22:48.460182"], ["image_file_name", "DSC00697-HDRB.JPG"], ["image_content_type", "image/jpeg"], ["image_file_size", 12556190], ["image_updated_at", "2020-10-08 13:22:48.438065"]]
+  ↳ app/controllers/registrations_controller.rb:21:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/registrations_controller.rb:21:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 291ms (ActiveRecord: 3.6ms | Allocations: 11449)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:22:48 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 25.2ms | Allocations: 13007)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 1.5ms | Allocations: 15858)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-08 15:22:50 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 2.1ms | Allocations: 916)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 3673)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:22:53 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 15.3ms | Allocations: 12995)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.9ms | Allocations: 15811)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:23:30 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 28.9ms | Allocations: 17051)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.3ms | Allocations: 17)
+Completed 200 OK in 87ms (Views: 32.6ms | ActiveRecord: 8.1ms | Allocations: 36045)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-08 15:23:32 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 1.4ms | Allocations: 967)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 3720)
+
+
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-08 15:23:38 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"N6kRrNZl5bqZdEMpFemmxeW/87bUBeuhfst83rdb0MOPP27b8nqvR4mR5P2fAAr1i4GduZzYFEVS9Mi5NeVRgA==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f513cfbf9c0 @tempfile=#<Tempfile:/tmp/RackMultipart20201008-63034-1d2brbq.JPG>, @original_filename="DSC01390B.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"DSC01390B.JPG\"\r\nContent-Type: image/jpeg\r\n">, "username"=>"12", "firstname"=>"123", "lastname"=>"2", "id"=>"18"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:42:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:43)
+[paperclip] Trying to link /tmp/RackMultipart20201008-63034-1d2brbq.JPG to /tmp/187e4a472c25212b87278882da10698920201008-63034-i6egls.JPG
+[paperclip] Trying to link /tmp/187e4a472c25212b87278882da10698920201008-63034-i6egls.JPG to /tmp/187e4a472c25212b87278882da10698920201008-63034-1rnm54z.JPG
+Command :: file -b --mime '/tmp/187e4a472c25212b87278882da10698920201008-63034-1rnm54z.JPG'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:43:in `update'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@mail2"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:43:in `update'
+[paperclip] Trying to link /tmp/187e4a472c25212b87278882da10698920201008-63034-i6egls.JPG to /tmp/187e4a472c25212b87278882da10698920201008-63034-hw4bam.JPG
+Command :: file -b --mime '/tmp/187e4a472c25212b87278882da10698920201008-63034-hw4bam.JPG'
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", "DSC01390B.JPG"], ["image_file_size", 19441888], ["image_updated_at", "2020-10-08 13:23:38.977821"], ["updated_at", "2020-10-08 13:23:39.015116"], ["id", 18]]
+  ↳ app/controllers/home_controller.rb:43:in `update'
+[paperclip] deleting /home/vm/workspace/fotoblog/public/system/users/images/000/000/018/original/DSC00697-HDRB.JPG
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:43:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 58ms (ActiveRecord: 4.7ms | Allocations: 14376)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:23:39 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 26.6ms | Allocations: 12996)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 32ms (Views: 27.4ms | ActiveRecord: 1.7ms | Allocations: 15837)
+
+
+Started GET "/home/profile" for 127.0.0.1 at 2020-10-08 15:23:40 +0200
+Processing by HomeController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/profile.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 6)
+  Rendered home/profile.html.erb within layouts/application (Duration: 6.1ms | Allocations: 915)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 3674)
+
+
+Started PATCH "/home/profile" for 127.0.0.1 at 2020-10-08 15:23:44 +0200
+Processing by HomeController#update as HTML
+  Parameters: {"authenticity_token"=>"FUx8BK2kCM7DT3zCxMmlfGzzZ+DpWkEe+KWb+khQ0eyt2gNzibtCM9Oq2xZOIAlMAs0J76GHvvrUmi+dyu5Qrw==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f513cfe2a60 @tempfile=#<Tempfile:/tmp/RackMultipart20201008-63034-1c24zar.JPG>, @original_filename="DSC01253B.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"DSC01253B.JPG\"\r\nContent-Type: image/jpeg\r\n">, "username"=>"12", "firstname"=>"123", "lastname"=>"2", "id"=>"18"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:42:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/vm/workspace/fotoblog/app/controllers/home_controller.rb:43)
+[paperclip] Trying to link /tmp/RackMultipart20201008-63034-1c24zar.JPG to /tmp/e1c7ce94d813b90484f77fde3222d3f420201008-63034-sgmwmj.JPG
+[paperclip] Trying to link /tmp/e1c7ce94d813b90484f77fde3222d3f420201008-63034-sgmwmj.JPG to /tmp/e1c7ce94d813b90484f77fde3222d3f420201008-63034-1aa8ifk.JPG
+Command :: file -b --mime '/tmp/e1c7ce94d813b90484f77fde3222d3f420201008-63034-1aa8ifk.JPG'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:43:in `update'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@mail2"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:43:in `update'
+[paperclip] Trying to link /tmp/e1c7ce94d813b90484f77fde3222d3f420201008-63034-sgmwmj.JPG to /tmp/e1c7ce94d813b90484f77fde3222d3f420201008-63034-1q8uiny.JPG
+Command :: file -b --mime '/tmp/e1c7ce94d813b90484f77fde3222d3f420201008-63034-1q8uiny.JPG'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image_file_name", "DSC01253B.JPG"], ["image_file_size", 21409081], ["image_updated_at", "2020-10-08 13:23:44.945868"], ["updated_at", "2020-10-08 13:23:44.963362"], ["id", 18]]
+  ↳ app/controllers/home_controller.rb:43:in `update'
+[paperclip] deleting /home/vm/workspace/fotoblog/public/system/users/images/000/000/018/original/DSC01390B.JPG
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:43:in `update'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 33ms (ActiveRecord: 3.2ms | Allocations: 13908)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:23:44 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 19.7ms | Allocations: 12996)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 1.5ms | Allocations: 15847)
+
+
+Started POST "/home/home" for 127.0.0.1 at 2020-10-08 15:23:50 +0200
+Processing by HomeController#create as HTML
+  Parameters: {"authenticity_token"=>"HySPV90d/FL1XsJgYlak1eW9/03aoN5Fs4nB9aLeaneLI3cfLpYvnfWkce4VfU1ZoVLHifXmdwXY8JqCUhzgew==", "comment"=>{"picture_id"=>"5", "comment"=>"Hello"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:80:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:80:in `create'
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:80:in `create'
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("comment", "created_at", "updated_at", "user_id", "picture_id") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "Hello"], ["created_at", "2020-10-08 13:23:50.412687"], ["updated_at", "2020-10-08 13:23:50.412687"], ["user_id", 18], ["picture_id", 5]]
+  ↳ app/controllers/home_controller.rb:80:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:80:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 11ms (ActiveRecord: 2.5ms | Allocations: 7760)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:23:50 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 23.9ms | Allocations: 13833)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 1.3ms | Allocations: 16689)
+
+
+Started POST "/home/home" for 127.0.0.1 at 2020-10-08 15:23:54 +0200
+Processing by HomeController#create as HTML
+  Parameters: {"authenticity_token"=>"U/5r/doE/8yTIVlx2VppGker2Hm2AdXaM3+5T0gWRjLH+ZO1KY8sA5Pb6v+ucYCWA0TgvZlHfJpYBuI4uNTMPg==", "like"=>{"picture_id"=>"4", "user_id"=>"18"}, "commit"=>"Like"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mLike Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mLike Create (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("created_at", "updated_at", "user_id", "picture_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2020-10-08 13:23:54.943039"], ["updated_at", "2020-10-08 13:23:54.943039"], ["user_id", 18], ["picture_id", 4]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:65:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 24ms (ActiveRecord: 7.0ms | Allocations: 11227)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:23:54 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 21.2ms | Allocations: 13847)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 1.2ms | Allocations: 16680)
+
+
+Started POST "/home/home" for 127.0.0.1 at 2020-10-08 15:23:57 +0200
+Processing by HomeController#create as HTML
+  Parameters: {"authenticity_token"=>"DR8gxUPPoAN/rQaBDXlAeXS6tChcccUz7XzP5ZpsyvaZGNiNsERzzH9XtQ96Uqn1MFWM7HM3bHOGBZSSaq5A+g==", "like"=>{"picture_id"=>"5", "user_id"=>"18"}, "commit"=>"Like"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mLike Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("created_at", "updated_at", "user_id", "picture_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2020-10-08 13:23:57.307095"], ["updated_at", "2020-10-08 13:23:57.307095"], ["user_id", 18], ["picture_id", 5]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:65:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms | Allocations: 7325)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:23:57 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 23.3ms | Allocations: 13848)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 1.5ms | Allocations: 16680)
+
+
+Started POST "/home/home" for 127.0.0.1 at 2020-10-08 15:23:59 +0200
+Processing by HomeController#create as HTML
+  Parameters: {"authenticity_token"=>"lSkewx35Bbwmwjuz5HCIhAreHBio9YuzQipsjbu+nOsBLuaL7nLWcyY4iD2TW2EITjEk3IezIvMpUzf6S3wW5w==", "like"=>{"picture_id"=>"3", "user_id"=>"18"}, "commit"=>"Like"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mLike Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mLike Create (1.2ms)[0m  [1m[32mINSERT INTO "likes" ("created_at", "updated_at", "user_id", "picture_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2020-10-08 13:23:59.826509"], ["updated_at", "2020-10-08 13:23:59.826509"], ["user_id", 18], ["picture_id", 3]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:65:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 17ms (ActiveRecord: 4.0ms | Allocations: 7322)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:23:59 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 28.8ms | Allocations: 13856)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 2.2ms | Allocations: 16676)
+
+
+Started POST "/home/home" for 127.0.0.1 at 2020-10-08 15:24:03 +0200
+Processing by HomeController#create as HTML
+  Parameters: {"authenticity_token"=>"t1T7lbyGIoQYJ9H/6BaKDMCxheq+ujUF720tNfsdtY0jUwPdTw3xSxjdYnGfPWOAhF69LpH8nEWEFHZCC98/gQ==", "like"=>{"picture_id"=>"2", "user_id"=>"18"}, "commit"=>"Like"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mLike Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("created_at", "updated_at", "user_id", "picture_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2020-10-08 13:24:03.010894"], ["updated_at", "2020-10-08 13:24:03.010894"], ["user_id", 18], ["picture_id", 2]]
+  ↳ app/controllers/home_controller.rb:65:in `create'
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:65:in `create'
+Redirected to http://127.0.0.1:9292/home/home
+Completed 302 Found in 15ms (ActiveRecord: 2.8ms | Allocations: 7339)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-08 15:24:03 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 18], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered home/home.html.erb within layouts/application (Duration: 48.1ms | Allocations: 13865)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.2ms | Allocations: 20)
+Completed 200 OK in 56ms (Views: 51.4ms | ActiveRecord: 2.5ms | Allocations: 16732)
+
+
+Started GET "/logout" for 127.0.0.1 at 2020-10-08 15:24:10 +0200
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:13:in `set_current_user'
+Redirected to http://127.0.0.1:9292/sessions/index
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 889)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-08 15:24:10 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 356)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 2670)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-08 15:24:37 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 727)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 3115)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-08 15:24:39 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 340)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 2509)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-08 15:24:41 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 0.9ms | Allocations: 683)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 2987)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-08 15:24:42 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 340)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2501)
+
+
