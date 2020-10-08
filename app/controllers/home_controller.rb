@@ -16,14 +16,26 @@ class HomeController < ApplicationController
 
 
   def update
-    if params['user']['image'] == nil
+    if params[:commit] == "Delete account"
+      reset_session
+      User.find(@current_user.id).destroy
+      redirect_to sessions_index_path, primary: "Your account is deleted."
+    elsif params[:commit] == "Reset image"
+      @user = User.find(@current_user.id)
+      file = File.open("/home/vm/workspace/fotoblog/app/assets/images/bilder/DSC00697-HDRB.JPG")
+      if @user.update_attribute(:image, file)
+        redirect_to home_profile_path, success: "You have successfully set your profile picture to the default!"
+      end
+      file.close
+    elsif params['user']['image'] == nil
       @user = User.find(params['user']['id'])
       @user.update_attributes(username: params['user']['username'], firstname: params['user']['firstname'], lastname: params['user']['lastname'])
+      redirect_to home_home_path, success: "You have successfully updated your profile!"
     else
       @user = User.find(params['user']['id'])
       @user.update_attributes(username: params['user']['username'], firstname: params['user']['firstname'], lastname: params['user']['lastname'], image: params['user']['image'])
+      redirect_to home_home_path, success: "You have successfully updated your profile!"
     end
-    redirect_to home_home_path, success: "You have successfully updated your profile!"
   end
 
 
@@ -56,21 +68,6 @@ class HomeController < ApplicationController
         redirect_to home_home_path, danger: "Try it again, the comment couldn't be posted."
       end
     end
-  end
-
-  def destroy
-    reset_session
-    User.find(@current_user.id).destroy
-    redirect_to sessions_index_path, primary: "Your account is deleted."
-  end
-
-  def default_image
-    @user = User.find(@current_user.id)
-    file = File.open("/home/aaron/Pictures/Screenshot from 2020-10-05 10-14-01.png")
-    if @user.update_attribute(:image, file)
-      redirect_to home_profile_path, success: "You have successfully set your profile picture to the default!"
-    end
-    file.close
   end
 
   def like

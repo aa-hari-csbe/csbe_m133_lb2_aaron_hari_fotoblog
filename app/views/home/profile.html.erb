@@ -12,7 +12,7 @@
         <%= user.file_field :image, value: @current_user.image.url , id: "file" %>
         <label for="file"><%= image_tag @current_user.image.url, class: "image" %></label>
       </section>
-      <%= link_to "Reset image", default_image_path, method: :put, class: "default-image form-control" %>
+      <%= user.submit "Reset image", class: "default-image form-control form-for-item" %>
       </section>
 
 
@@ -24,7 +24,7 @@
         </article>
         <%= user.hidden_field :id, value: @current_user.id %>
         <section class="flex-container submit-and-delete">
-          <%= link_to "Delete your account", delete_user_path, method: :delete, data: {confirm: "Are you sure that you want to delete your account permenently? \n\r There will be no way to restore your account!"}, class: "form-for-item button delete-account" %>
+          <%= user.submit "Delete account", data: {confirm: "Are you sure that you want to delete your account permenently? \n\r There will be no way to restore your account!"}, class: "form-for-item button delete-account" %>
           <%= user.submit "Save changes", data: {confirm: "Are you sure that you want to update your profile?"}, class: "form-for-item form-control button" %>
         </section>
       </section>

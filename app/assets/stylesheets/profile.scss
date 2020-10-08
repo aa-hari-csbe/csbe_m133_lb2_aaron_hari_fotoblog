@@ -1,6 +1,14 @@
 .form-for-edit {
   flex-direction: column;
 
+  .form-for-item:hover {
+    background-color: #fafafa;
+  }
+
+  .form-for-item:focus {
+    background-color: #fafafa;
+  }
+
 }
 
 .edit-section {
@@ -23,9 +31,12 @@
     text-align: center;
 
     .default-image {
-      margin-top: 1rem;
       width: 80%;
       align-self: auto;
+      height: 2.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 0;
     }
 
     .file-upload {
@@ -67,7 +78,14 @@
   .delete-account {
     color: #a33939;
     font-size: 1rem;
-    padding-top: 0.5rem;
+    border: 0;
+    background-color: #FFFFFF;
+    text-align: start;
+  }
+
+  .delete-account:hover {
+    background-color: #FFFFFF;
+    text-decoration: underline;
   }
 }
 

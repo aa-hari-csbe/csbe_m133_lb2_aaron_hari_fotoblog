@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/registrations/registration'
   get '/home/home'
   get '/logout', to: "sessions#logout"
-  get '/home/profile'
+  get '/home/profile', to: 'home#profile'
 
   get '/home/home/:picture_id', to: 'home#like', as: 'like_picture'
 
@@ -23,8 +23,5 @@ Rails.application.routes.draw do
 
   patch '/home/profile', to: 'home#update', as: 'update_user'
   delete '/home/profile', to: 'home#destroy', as: 'delete_user'
-  put '/home/profile', to: 'home#default_image', as: 'default_image'
-
-
 
 end
