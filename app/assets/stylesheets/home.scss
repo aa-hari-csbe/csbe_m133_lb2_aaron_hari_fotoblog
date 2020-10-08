@@ -144,8 +144,14 @@
 
       .comment-new {
         position: sticky;
+        margin-top: 100%;
         bottom: 0;
         width: 100%;
+        scroll-snap-stop: always;
+        background-color: #E1E1E1;
+        border-top: 3px;
+        border-bottom: 0;
+        border-color: #b30b0b;
 
         .comment-new-input {
           width: 100%;
