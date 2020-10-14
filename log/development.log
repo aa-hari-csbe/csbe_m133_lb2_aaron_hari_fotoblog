@@ -47117,3 +47117,200 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-10-14 21:22:18 +0200
+  [1m[35m (10.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/home/home" for 127.0.0.1 at 2020-10-14 21:22:21 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:14:in `set_current_user'
+Redirected to http://localhost:9292/sessions/index
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 1.3ms | Allocations: 11086)
+
+
+Started GET "/sessions/index" for 127.0.0.1 at 2020-10-14 21:22:21 +0200
+Processing by SessionsController#index as HTML
+  Rendering sessions/index.html.erb within layouts/application
+  Rendered sessions/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1058)
+  Rendered layouts/_flash_messages.html.erb (Duration: 1.0ms | Allocations: 164)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.0ms | Allocations: 10673)
+
+
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-14 21:22:24 +0200
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 85)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1334)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 4022)
+
+
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-14 21:22:35 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"0q8Sv3WJflERI3gUbaLSXlPiux9BQBr4cQCGTyVd+HJ29hm/LsIwfQ4ZI5itmssV4mYO7k3Y6WhNzq4tT/1mfA==", "user"=>{"email"=>"sdt@dsaf", "username"=>"asd", "firstname"=>"asd", "lastname"=>"asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.0ms | Allocations: 742)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - ../images/bilder/DSC00697-HDRB.JPG):
+  
+app/controllers/registrations_controller.rb:18:in `initialize'
+app/controllers/registrations_controller.rb:18:in `open'
+app/controllers/registrations_controller.rb:18:in `create'
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-14 21:25:11 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"0q8Sv3WJflERI3gUbaLSXlPiux9BQBr4cQCGTyVd+HJ29hm/LsIwfQ4ZI5itmssV4mYO7k3Y6WhNzq4tT/1mfA==", "user"=>{"email"=>"sdt@dsaf", "username"=>"asd", "firstname"=>"asd", "lastname"=>"asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.5ms | Allocations: 9493)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - RAILS_ROOT/app/assets/images/bilder/DSC00697-HDRB.JPG):
+  
+app/controllers/registrations_controller.rb:18:in `initialize'
+app/controllers/registrations_controller.rb:18:in `open'
+app/controllers/registrations_controller.rb:18:in `create'
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-14 21:25:23 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"0q8Sv3WJflERI3gUbaLSXlPiux9BQBr4cQCGTyVd+HJ29hm/LsIwfQ4ZI5itmssV4mYO7k3Y6WhNzq4tT/1mfA==", "user"=>{"email"=>"sdt@dsaf", "username"=>"asd", "firstname"=>"asd", "lastname"=>"asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 0.0ms | Allocations: 718)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - RAILS_ROOT/app/assets/images/bilder/DSC00697-HDRB.JPG):
+  
+app/controllers/registrations_controller.rb:18:in `initialize'
+app/controllers/registrations_controller.rb:18:in `open'
+app/controllers/registrations_controller.rb:18:in `create'
+Started GET "/registrations/registration" for 127.0.0.1 at 2020-10-14 21:26:35 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RegistrationsController#registration as HTML
+  Rendering registrations/registration.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered registrations/registration.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1059)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 3461)
+
+
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-14 21:26:38 +0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"GbfcHErs3ITsdJbHM8dsPQ2fnbcLis3rIPRTyBqCbLS97tccEaeSqPNOzUvz/3V2vBsoRgcSPnscOnuqcCLyug==", "user"=>{"email"=>"sdt@dsaf", "username"=>"asd", "firstname"=>"asd", "lastname"=>"asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.7ms | Allocations: 9447)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - RAILS_ROOT/fotoblog/app/assets/images/bilder/DSC00697-HDRB.JPG):
+  
+app/controllers/registrations_controller.rb:18:in `initialize'
+app/controllers/registrations_controller.rb:18:in `open'
+app/controllers/registrations_controller.rb:18:in `create'
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-14 21:29:24 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"GbfcHErs3ITsdJbHM8dsPQ2fnbcLis3rIPRTyBqCbLS97tccEaeSqPNOzUvz/3V2vBsoRgcSPnscOnuqcCLyug==", "user"=>{"email"=>"sdt@dsaf", "username"=>"asd", "firstname"=>"asd", "lastname"=>"asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 0.5ms | Allocations: 9587)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /app/assets/images/bilder/DSC00697-HDRB.JPG):
+  
+app/controllers/registrations_controller.rb:18:in `initialize'
+app/controllers/registrations_controller.rb:18:in `open'
+app/controllers/registrations_controller.rb:18:in `create'
+Started POST "/registrations/registration" for 127.0.0.1 at 2020-10-14 21:30:13 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"GbfcHErs3ITsdJbHM8dsPQ2fnbcLis3rIPRTyBqCbLS97tccEaeSqPNOzUvz/3V2vBsoRgcSPnscOnuqcCLyug==", "user"=>{"email"=>"sdt@dsaf", "username"=>"asd", "firstname"=>"asd", "lastname"=>"asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+[paperclip] Trying to link /home/vm/workspace/fotoblog/app/assets/images/bilder/DSC00697-HDRB.JPG to /tmp/9426625656f029d0c7562ee5c76f429120201014-4172-1aejzn1.JPG
+[paperclip] Trying to link /tmp/9426625656f029d0c7562ee5c76f429120201014-4172-1aejzn1.JPG to /tmp/9426625656f029d0c7562ee5c76f429120201014-4172-bqhgbx.JPG
+Command :: file -b --mime '/tmp/9426625656f029d0c7562ee5c76f429120201014-4172-bqhgbx.JPG'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:25:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sdt@dsaf"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:25:in `create'
+[paperclip] Trying to link /tmp/9426625656f029d0c7562ee5c76f429120201014-4172-1aejzn1.JPG to /tmp/9426625656f029d0c7562ee5c76f429120201014-4172-1ogyais.JPG
+Command :: file -b --mime '/tmp/9426625656f029d0c7562ee5c76f429120201014-4172-1ogyais.JPG'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "firstname", "lastname", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "sdt@dsaf"], ["password_digest", "$2a$12$8rxIbVhqt9pZbB/LxBGrw.NVLE1Ry06Xt66rr7.R9MpZtjah1lTj2"], ["username", "asd"], ["firstname", "asd"], ["lastname", "asd"], ["created_at", "2020-10-14 19:30:13.616714"], ["updated_at", "2020-10-14 19:30:13.616714"], ["image_file_name", "DSC00697-HDRB.JPG"], ["image_content_type", "image/jpeg"], ["image_file_size", 12556190], ["image_updated_at", "2020-10-14 19:30:13.528025"]]
+  ↳ app/controllers/registrations_controller.rb:25:in `create'
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/registrations_controller.rb:25:in `create'
+Redirected to http://localhost:9292/home/home
+Completed 302 Found in 317ms (ActiveRecord: 5.5ms | Allocations: 21820)
+
+
+Started GET "/home/home" for 127.0.0.1 at 2020-10-14 21:30:13 +0200
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:14:in `set_current_user'
+  Rendering home/home.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/home/home.html.erb:20
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 32], ["picture_id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/home/home.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 32], ["picture_id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 32], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = ? AND "likes"."picture_id" = ? LIMIT ?[0m  [["user_id", 32], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/views/home/home.html.erb:41
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/home.html.erb:48
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered home/home.html.erb within layouts/application (Duration: 34.3ms | Allocations: 19872)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 60ms (Views: 34.9ms | ActiveRecord: 3.1ms | Allocations: 30834)
+
+
