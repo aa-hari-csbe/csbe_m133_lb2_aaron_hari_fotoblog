@@ -14,7 +14,9 @@ class ApplicationController < ActionController::Base
   # Global variable for the lifespan of a session.
   @@session_duration = 60.minutes
   # The path of the default profile picture.
-  @@default_profile_picture_path = "/home/vm/workspace/fotoblog/app/assets/images/bilder/DSC00697-HDRB.JPG"
+  @@default_profile_picture_path = Rails.root.to_s + "/app/assets/images/bilder/DSC00697-HDRB.JPG"
+
+
 
   private
 
